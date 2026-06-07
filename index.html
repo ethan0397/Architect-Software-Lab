@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Architect Study Guide</title>
+    <style>
+      :root {
+        --bg: #07111a;
+        --panel: #0d1825;
+        --panel-2: #101d2c;
+        --text: #ecf3ff;
+        --muted: #92a8c4;
+        --line: #23374d;
+        --blue: #75b7ff;
+        --green: #72e0ab;
+        --gold: #f3c469;
+        --pink: #e198ff;
+        --cyan: #76dce8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+      a { color: inherit; text-decoration: none; }
+      .page {
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top left, rgba(117,183,255,.12), transparent 28%),
+          radial-gradient(circle at top right, rgba(225,152,255,.10), transparent 24%),
+          linear-gradient(180deg, #07111a 0%, #09131d 100%);
+      }
+      .wrap {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+      .hero {
+        padding: 40px 0 28px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+      .hero-grid > * {
+        min-width: 0;
+      }
+      .hero-copy,
+      .hero-art,
+      .section,
+      .tile,
+      .roadmap-card,
+      .note,
+      .file-card {
+        background: rgba(13, 24, 37, .88);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+      }
+      .hero-copy {
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+      }
+      .eyebrow {
+        display: inline-flex;
+        gap: 10px;
+        width: fit-content;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid #294560;
+        color: var(--blue);
+        font-size: 13px;
+        letter-spacing: .02em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 20px 0 12px;
+        font-size: clamp(38px, 5vw, 62px);
+        line-height: 1.02;
+      }
+      .hero-copy p {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.65;
+        color: var(--muted);
+        max-width: 62ch;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .chip {
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: #0f2033;
+        border: 1px solid #2a4765;
+        font-size: 14px;
+        color: #dbeaff;
+      }
+      .hero-art {
+        overflow: hidden;
+        min-height: 100%;
+        padding: 18px;
+        background: #0a1522;
+      }
+      .hero-art img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+      .band {
+        padding: 12px 0 28px;
+      }
+      .section {
+        padding: 24px;
+      }
+      .section h2 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+      .section p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .tile {
+        overflow: hidden;
+      }
+      .tile img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: contain;
+        object-position: center;
+        background: #0a1522;
+        border-bottom: 1px solid var(--line);
+      }
+      .tile-body {
+        padding: 18px;
+      }
+      .tile-body h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+      }
+      .tile-body p {
+        margin: 0;
+        line-height: 1.6;
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .tile-points {
+        margin: 14px 0 0;
+        padding-left: 18px;
+        color: #dce8fb;
+        line-height: 1.7;
+        font-size: 14px;
+      }
+      .roadmap {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+      .roadmap-card {
+        padding: 18px;
+      }
+      .roadmap-card .kicker {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        color: var(--gold);
+      }
+      .roadmap-card h3 {
+        margin: 8px 0 10px;
+        font-size: 18px;
+      }
+      .roadmap-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 14px;
+      }
+      .notes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .note {
+        padding: 20px;
+      }
+      .note h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+      .note ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .files {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+      .file-card {
+        padding: 18px;
+      }
+      .file-card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+      .file-card p {
+        margin: 0 0 12px;
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 14px;
+      }
+      .file-link {
+        display: inline-flex;
+        padding: 10px 14px;
+        border-radius: 12px;
+        border: 1px solid #315071;
+        background: #102133;
+        color: #dfeeff;
+        font-size: 14px;
+      }
+      footer {
+        padding: 8px 0 40px;
+        color: #6f87a3;
+        font-size: 14px;
+      }
+      @media (max-width: 1180px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-art img {
+          aspect-ratio: 16 / 10;
+          height: auto;
+        }
+      }
+      @media (max-width: 980px) {
+        .hero-grid,
+        .tiles,
+        .roadmap,
+        .notes,
+        .files {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="wrap">
+        <section class="hero">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div>
+                <div class="eyebrow">Build • Design • Scale</div>
+                <h1>Software Architect Study Guide</h1>
+                <p>
+                  Một trang học tập gói gọn roadmap, design patterns, architecture foundations và
+                  system design exercises. Trọng tâm là hiểu vấn đề, nhìn ra tradeoff và chọn cấu trúc
+                  phù hợp cho từng loại hệ thống.
+                </p>
+                <div class="chips">
+                  <span class="chip">Design Patterns</span>
+                  <span class="chip">Architecture Styles</span>
+                  <span class="chip">System Design</span>
+                  <span class="chip">ADR & Tradeoff</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-art">
+              <img src="./assets/architecture-illustration.svg" alt="Architecture illustration" />
+            </div>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section">
+            <h2>Bản đồ học tập</h2>
+            <p>
+              Học theo nhịp: nền tảng code, pattern, application architecture, distributed systems,
+              rồi mới đi sâu vào system design và decision making. Mỗi phần bên dưới có ảnh minh họa
+              để bạn nhìn cấu trúc trước khi đọc chi tiết.
+            </p>
+
+            <div class="tiles">
+              <article class="tile">
+                <img src="./assets/patterns-illustration.svg" alt="Design patterns illustration" />
+                <div class="tile-body">
+                  <h3>Design Patterns</h3>
+                  <p>Học pattern theo nhóm vấn đề: tạo object, ghép module, phối hợp hành vi.</p>
+                  <ul class="tile-points">
+                    <li>Factory, Builder, Singleton</li>
+                    <li>Adapter, Facade, Decorator, Proxy</li>
+                    <li>Strategy, State, Observer, Command</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="tile">
+                <img src="./assets/architecture-illustration.svg" alt="Architecture foundations illustration" />
+                <div class="tile-body">
+                  <h3>Architecture Foundations</h3>
+                  <p>Nhìn system theo boundary, dependency direction, persistence và event flow.</p>
+                  <ul class="tile-points">
+                    <li>Layered, Modular Monolith, Hexagonal</li>
+                    <li>Microservices và Event-Driven</li>
+                    <li>NFR, team ownership, cost of change</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="tile">
+                <img src="./assets/system-design-illustration.svg" alt="System design illustration" />
+                <div class="tile-body">
+                  <h3>System Design</h3>
+                  <p>Đi từ requirement, NFR, scale, data flow, failure mode đến ADR.</p>
+                  <ul class="tile-points">
+                    <li>URL Shortener, Order Flow, Booking</li>
+                    <li>Notification, Audit Log</li>
+                    <li>Checklist review và portfolio format</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section">
+            <h2>Roadmap 6 tháng</h2>
+            <p>
+              Chia đều thành ba nhịp: code-level design, application/system architecture và architect
+              mindset. Mỗi nhịp giải quyết một lớp năng lực khác nhau.
+            </p>
+            <div class="roadmap">
+              <div class="roadmap-card">
+                <div class="kicker">Tháng 1-2</div>
+                <h3>Code-Level Design</h3>
+                <p>OOP, SOLID, cohesion, coupling, refactoring, unit test và các pattern cốt lõi.</p>
+              </div>
+              <div class="roadmap-card">
+                <div class="kicker">Tháng 3-4</div>
+                <h3>Application & Distributed Systems</h3>
+                <p>Boundary, modular monolith, hexagonal architecture, data consistency, retry, timeout.</p>
+              </div>
+              <div class="roadmap-card">
+                <div class="kicker">Tháng 5-6</div>
+                <h3>Tradeoff & System Design</h3>
+                <p>Chọn architecture style, vẽ system, đánh giá NFR, viết ADR và trình bày quyết định.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section">
+            <h2>Gợi ý học hiệu quả</h2>
+            <p>
+              Tài liệu này mạnh nhất khi bạn vừa đọc, vừa vẽ lại, rồi áp dụng vào một project nhỏ của
+              riêng mình. Đừng học pattern như flashcard; hãy học nó như một phản xạ giải quyết vấn đề.
+            </p>
+            <div class="notes">
+              <div class="note">
+                <h3>Cách đọc tài liệu</h3>
+                <ul>
+                  <li>Đọc roadmap để thấy toàn cảnh trước.</li>
+                  <li>Đọc design patterns để biết công cụ ở mức code và module.</li>
+                  <li>Đọc architecture foundations để hiểu cấu trúc hệ thống.</li>
+                  <li>Làm system design exercises để biến kiến thức thành phản xạ.</li>
+                </ul>
+              </div>
+              <div class="note">
+                <h3>Cách tự kiểm tra</h3>
+                <ul>
+                  <li>Bạn có thể giải thích lại chủ đề bằng ví dụ thực tế không?</li>
+                  <li>Bạn có thể vẽ sơ đồ cho nó không?</li>
+                  <li>Bạn có chỉ ra được tradeoff không?</li>
+                  <li>Bạn có biết lúc nào không nên dùng nó không?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section">
+            <h2>Mở từng tài liệu</h2>
+            <p>Trang này là điểm vào. Phần học chi tiết vẫn nằm trong các file Markdown bên dưới.</p>
+            <div class="files">
+              <div class="file-card">
+                <h3>Roadmap</h3>
+                <p>Lộ trình 6 tháng, cách học theo tuần, mốc tự đánh giá và portfolio project.</p>
+                <a class="file-link" href="./roadmap.html">Mở roadmap.html</a>
+              </div>
+              <div class="file-card">
+                <h3>Design Patterns</h3>
+                <p>Phân nhóm pattern, ví dụ hệ thống, hình minh họa và cách chọn pattern theo dấu hiệu.</p>
+                <a class="file-link" href="./design-patterns.html">Mở design-patterns.html</a>
+              </div>
+              <div class="file-card">
+                <h3>Architecture Foundations</h3>
+                <p>Các nguyên lý cốt lõi, architecture styles, NFR và tư duy ra quyết định.</p>
+                <a class="file-link" href="./architecture-foundations.html">Mở architecture-foundations.html</a>
+              </div>
+              <div class="file-card">
+                <h3>System Design Exercises</h3>
+                <p>Bài tập, checklist review, points cần chú ý và cách biến bài làm thành portfolio.</p>
+                <a class="file-link" href="./system-design-exercises.html">Mở system-design-exercises.html</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          Trang tĩnh này mở trực tiếp được trong trình duyệt: <code>software-architect-skill/index.html</code>
+        </footer>
+      </div>
+    </div>
+  </body>
+  </html>

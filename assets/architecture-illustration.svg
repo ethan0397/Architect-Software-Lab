@@ -1,0 +1,60 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="28" fill="#07111F"/>
+  <rect x="24" y="24" width="1152" height="672" rx="24" stroke="#1E3350" stroke-width="2"/>
+  <text x="48" y="74" fill="#E8F0FF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Software Architecture Map</text>
+  <text x="48" y="108" fill="#89A4C7" font-family="Inter, Arial, sans-serif" font-size="18">Từ yêu cầu đến domain, service, data và event flow</text>
+
+  <rect x="48" y="150" width="180" height="252" rx="18" fill="#0C1A2B" stroke="#24486E"/>
+  <text x="74" y="196" fill="#79B8FF" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Clients</text>
+  <rect x="74" y="220" width="128" height="44" rx="12" fill="#102338" stroke="#295A84"/>
+  <rect x="74" y="278" width="128" height="44" rx="12" fill="#102338" stroke="#295A84"/>
+  <rect x="74" y="336" width="128" height="44" rx="12" fill="#102338" stroke="#295A84"/>
+  <text x="113" y="248" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="18">Web</text>
+  <text x="106" y="306" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="18">Mobile</text>
+  <text x="98" y="364" fill="#DDEBFF" font-family="Inter, Arial, sans-serif" font-size="18">Admin</text>
+
+  <rect x="284" y="214" width="170" height="92" rx="18" fill="#1C1633" stroke="#8B6CF8"/>
+  <text x="319" y="267" fill="#CDBDFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">API Gateway</text>
+
+  <rect x="516" y="150" width="422" height="264" rx="20" fill="#0D1F1D" stroke="#2EC27E"/>
+  <text x="548" y="196" fill="#9AF3C9" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">Application Layer</text>
+  <rect x="548" y="228" width="102" height="60" rx="14" fill="#12372F" stroke="#46D39C"/>
+  <rect x="668" y="228" width="102" height="60" rx="14" fill="#12372F" stroke="#46D39C"/>
+  <rect x="788" y="228" width="118" height="60" rx="14" fill="#12372F" stroke="#46D39C"/>
+  <rect x="548" y="314" width="102" height="60" rx="14" fill="#12372F" stroke="#46D39C"/>
+  <rect x="668" y="314" width="102" height="60" rx="14" fill="#12372F" stroke="#46D39C"/>
+  <rect x="788" y="314" width="118" height="60" rx="14" fill="#12372F" stroke="#46D39C"/>
+  <text x="572" y="265" fill="#EAFFF5" font-family="Inter, Arial, sans-serif" font-size="18">User</text>
+  <text x="697" y="265" fill="#EAFFF5" font-family="Inter, Arial, sans-serif" font-size="18">Order</text>
+  <text x="820" y="265" fill="#EAFFF5" font-family="Inter, Arial, sans-serif" font-size="18">Payment</text>
+  <text x="562" y="351" fill="#EAFFF5" font-family="Inter, Arial, sans-serif" font-size="18">Notify</text>
+  <text x="694" y="351" fill="#EAFFF5" font-family="Inter, Arial, sans-serif" font-size="18">Catalog</text>
+  <text x="824" y="351" fill="#EAFFF5" font-family="Inter, Arial, sans-serif" font-size="18">Report</text>
+
+  <rect x="952" y="150" width="192" height="264" rx="20" fill="#2B2410" stroke="#E0A93B"/>
+  <text x="976" y="196" fill="#FFE3A1" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Data Layer</text>
+  <rect x="982" y="230" width="132" height="60" rx="14" fill="#403315" stroke="#F2C763"/>
+  <rect x="982" y="316" width="132" height="60" rx="14" fill="#403315" stroke="#F2C763"/>
+  <text x="1009" y="265" fill="#FFF4D3" font-family="Inter, Arial, sans-serif" font-size="17">Primary DB</text>
+  <text x="1020" y="351" fill="#FFF4D3" font-family="Inter, Arial, sans-serif" font-size="18">Cache</text>
+
+  <rect x="420" y="470" width="500" height="72" rx="18" fill="#2A1535" stroke="#D45CF4"/>
+  <text x="615" y="514" fill="#FFD7FF" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Event Bus</text>
+
+  <rect x="496" y="576" width="108" height="60" rx="14" fill="#102338" stroke="#4B78A8"/>
+  <rect x="628" y="576" width="108" height="60" rx="14" fill="#102338" stroke="#4B78A8"/>
+  <rect x="760" y="576" width="108" height="60" rx="14" fill="#102338" stroke="#4B78A8"/>
+  <text x="524" y="612" fill="#E8F0FF" font-family="Inter, Arial, sans-serif" font-size="18">Email</text>
+  <text x="654" y="612" fill="#E8F0FF" font-family="Inter, Arial, sans-serif" font-size="18">Audit</text>
+  <text x="788" y="612" fill="#E8F0FF" font-family="Inter, Arial, sans-serif" font-size="18">Analytics</text>
+
+  <path d="M228 260H284" stroke="#7AA2D5" stroke-width="3"/>
+  <path d="M454 260H516" stroke="#B99CFF" stroke-width="3"/>
+  <path d="M938 282H968" stroke="#B4E9C9" stroke-width="3"/>
+  <path d="M727 414V470" stroke="#74E5B0" stroke-width="3"/>
+  <path d="M548 542V576" stroke="#D18AF5" stroke-width="3"/>
+  <path d="M680 542V576" stroke="#D18AF5" stroke-width="3"/>
+  <path d="M812 542V576" stroke="#D18AF5" stroke-width="3"/>
+
+  <text x="48" y="666" fill="#6D86A7" font-family="Inter, Arial, sans-serif" font-size="16">Boundary • Dependency Direction • Event Flow • Persistence</text>
+</svg>

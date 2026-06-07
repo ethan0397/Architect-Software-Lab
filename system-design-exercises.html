@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Design Exercises</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>Bài tập để biến kiến thức thành phản xạ thiết kế</span>
+        </div>
+        <nav class="nav">
+          <a href="./index.html">Trang chủ</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./design-patterns.html">Patterns</a>
+          <a href="./architecture-foundations.html">Architecture</a>
+          <a href="./system-design-exercises.html" class="active">Exercises</a>
+        </nav>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Practice</div>
+            <h1>System Design Exercises</h1>
+            <p>
+              Mỗi bài tập giúp bạn luyện một vòng đầy đủ: làm rõ requirement, xác định NFR, ước lượng
+              scale, vẽ data flow, chỉ ra bottleneck và nói rõ tradeoff.
+            </p>
+            <div class="hero-stats">
+              <span class="pill">Requirement</span>
+              <span class="pill">NFR</span>
+              <span class="pill">Tradeoff</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./assets/system-design-illustration.svg" alt="System design illustration" />
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <h2>Mục lục</h2>
+          <nav class="toc">
+            <a href="#method">Phương pháp luyện</a>
+            <a href="#cases">Bài tập</a>
+            <a href="#review">Checklist review</a>
+            <a href="#portfolio">Biến bài tập thành portfolio</a>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="section-block" id="method">
+            <h2>Phương pháp luyện</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Bước</th><th>Việc cần làm</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Làm rõ requirement chức năng</td></tr>
+                  <tr><td>2</td><td>Làm rõ NFR</td></tr>
+                  <tr><td>3</td><td>Ước lượng scale</td></tr>
+                  <tr><td>4</td><td>Xác định component chính và data flow</td></tr>
+                  <tr><td>5</td><td>Chỉ ra bottleneck, failure mode, tradeoff</td></tr>
+                  <tr><td>6</td><td>Viết lại giải pháp như đang trình bày cho team</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note" style="margin-top:18px">
+              <strong>Mẹo luyện</strong>
+              Đừng nhảy vào microservices quá sớm. Hãy hỏi dữ liệu đi đâu, ai sở hữu nó, và system lỗi ở đâu trước khi hỏi service nào tồn tại.
+            </div>
+          </section>
+
+          <section class="section-block" id="cases">
+            <h2>Bài tập</h2>
+            <div class="grid-2">
+              <div class="card"><span class="tag blue">Case 1</span><h3>URL Shortener</h3><p>Học read/write pattern, key generation, caching, database indexing và analytics path.</p></div>
+              <div class="card"><span class="tag green">Case 2</span><h3>E-commerce Order Flow</h3><p>Học service boundary, inventory consistency, payment integration và notification async.</p></div>
+              <div class="card"><span class="tag gold">Case 3</span><h3>Booking System</h3><p>Học concurrent booking, temporary reservation, expiration và availability view.</p></div>
+              <div class="card"><span class="tag pink">Case 4</span><h3>Notification Platform</h3><p>Học multi-channel delivery, provider failover, retry và template management.</p></div>
+              <div class="card"><span class="tag cyan">Case 5</span><h3>Audit Log System</h3><p>Học immutable event, searchability, storage growth, security và compliance.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="review">
+            <h2>Checklist review</h2>
+            <div class="grid-2">
+              <div class="card">
+                <ul>
+                  <li>Boundary có rõ không?</li>
+                  <li>Dependency có hợp lý không?</li>
+                  <li>Data consistency được xử lý chưa?</li>
+                  <li>Failure mode đã được nói tới chưa?</li>
+                  <li>Monitoring/logging/metrics đã có chưa?</li>
+                  <li>Có giải thích tradeoff không?</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Tự chấm điểm</h3>
+                <ul>
+                  <li>Rõ requirement: 1-5</li>
+                  <li>Rõ NFR: 1-5</li>
+                  <li>Boundary hợp lý: 1-5</li>
+                  <li>Data flow rõ: 1-5</li>
+                  <li>Nói được tradeoff: 1-5</li>
+                  <li>Nói được failure mode: 1-5</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="portfolio">
+            <h2>Biến bài tập thành portfolio</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Mỗi bài nên có</h3>
+                <ul>
+                  <li>Problem statement</li>
+                  <li>Assumptions</li>
+                  <li>Context diagram</li>
+                  <li>Container/component diagram</li>
+                  <li>Sequence diagram</li>
+                  <li>Database choice</li>
+                  <li>Scaling strategy</li>
+                  <li>ADR ngắn</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>Gợi ý</strong>
+                Portfolio tốt không cần quá nhiều bài. Chỉ cần 2-3 bài nhưng phân tích sâu, có diagram sạch và tradeoff rõ là đủ mạnh.
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">Nguồn nội dung gốc: <code>references/system-design-exercises.md</code></div>
+    </div>
+  </body>
+  </html>

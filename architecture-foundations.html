@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Architecture Foundations</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>Nguyên lý nền tảng để nhìn system đúng cách</span>
+        </div>
+        <nav class="nav">
+          <a href="./index.html">Trang chủ</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./design-patterns.html">Patterns</a>
+          <a href="./architecture-foundations.html" class="active">Architecture</a>
+          <a href="./system-design-exercises.html">Exercises</a>
+        </nav>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Foundations</div>
+            <h1>Architecture Foundations</h1>
+            <p>
+              Phần khung xương của cả bộ tài liệu: nguyên lý trách nhiệm, ranh giới, phụ thuộc,
+              architecture style, NFR và cách ghi lại quyết định kỹ thuật bằng ADR.
+            </p>
+            <div class="hero-stats">
+              <span class="pill">Boundary</span>
+              <span class="pill">Dependency Direction</span>
+              <span class="pill">NFR</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./assets/architecture-illustration.svg" alt="Architecture illustration" />
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <h2>Mục lục</h2>
+          <nav class="toc">
+            <a href="#principles">Nguyên lý cốt lõi</a>
+            <a href="#code-to-arch">Từ code đến architecture</a>
+            <a href="#styles">Architecture styles</a>
+            <a href="#nfr">Non-functional requirements</a>
+            <a href="#questions">Câu hỏi trước khi design</a>
+            <a href="#adr">ADR và sai lầm phổ biến</a>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="section-block" id="principles">
+            <h2>Nguyên lý cốt lõi</h2>
+            <div class="grid-2">
+              <div class="card"><span class="tag blue">Separation</span><h3>Separation of Concerns</h3><p>Mỗi phần nên có một loại trách nhiệm chính. UI, business và persistence trộn lẫn sẽ làm thay đổi rất đau.</p></div>
+              <div class="card"><span class="tag green">Cohesion</span><h3>High Cohesion</h3><p>Những thứ liên quan nên ở gần nhau để dễ hiểu và dễ thay đổi.</p></div>
+              <div class="card"><span class="tag pink">Coupling</span><h3>Low Coupling</h3><p>Module nên biết về nhau ít nhất có thể để giảm blast radius khi đổi code.</p></div>
+              <div class="card"><span class="tag gold">Boundary</span><h3>Explicit Boundaries</h3><p>Boundary rõ giúp chia việc tốt hơn, test dễ hơn và architecture sống lâu hơn.</p></div>
+              <div class="card"><span class="tag cyan">Dependency</span><h3>Dependency Direction</h3><p>Code mức cao không nên phụ thuộc chi tiết mức thấp. Domain nên sống được dù framework thay đổi.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="code-to-arch">
+            <h2>Từ code đến architecture</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Chuỗi tiến hóa</h3>
+                <ul>
+                  <li>Classes</li>
+                  <li>Modules</li>
+                  <li>Components</li>
+                  <li>Services</li>
+                  <li>System Landscape</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>Ghi nhớ</strong>
+                Architecture không xuất hiện từ trên trời. Nó là kết quả tích lũy của rất nhiều quyết định nhỏ ở mức class, module và dependency.
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="styles">
+            <h2>Architecture Styles</h2>
+            <div class="grid-2">
+              <div class="card"><span class="tag blue">Layered</span><h3>Layered Architecture</h3><p>Dễ hiểu, dễ bắt đầu, hợp với nhiều CRUD system nhưng dễ bị anemic domain nếu tổ chức lỏng.</p></div>
+              <div class="card"><span class="tag green">Modular Monolith</span><h3>Modular Monolith</h3><p>Rất hợp cho phần lớn sản phẩm mới: một deployment nhưng có module và boundary rõ.</p></div>
+              <div class="card"><span class="tag gold">Hexagonal</span><h3>Hexagonal Architecture</h3><p>Đặt domain ở trung tâm, adapter ở bên ngoài. Rất tốt cho testability và khả năng thay hạ tầng.</p></div>
+              <div class="card"><span class="tag pink">Microservices</span><h3>Microservices</h3><p>Hợp khi boundary nghiệp vụ đủ rõ, team đủ lớn và cần deployment độc lập. Giá phải trả là complexity phân tán.</p></div>
+              <div class="card"><span class="tag cyan">Event-Driven</span><h3>Event-Driven Architecture</h3><p>Rất hợp cho notification, analytics, workflow bất đồng bộ, nhưng phải hiểu eventual consistency và idempotency.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="nfr">
+            <h2>Non-Functional Requirements</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>NFR</th><th>Ý nghĩa trong design</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Performance</td><td>Hệ thống phải phản hồi nhanh đến mức nào?</td></tr>
+                  <tr><td>Scalability</td><td>Khi tải tăng, hệ thống mở rộng ra sao?</td></tr>
+                  <tr><td>Availability</td><td>Downtime chấp nhận được là bao nhiêu?</td></tr>
+                  <tr><td>Reliability</td><td>Lỗi sẽ được xử lý và phục hồi thế nào?</td></tr>
+                  <tr><td>Observability</td><td>Làm sao biết hệ thống đang lỗi ở đâu?</td></tr>
+                  <tr><td>Cost Efficiency</td><td>Kiến trúc có đáng với chi phí vận hành không?</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section-block" id="questions">
+            <h2>Câu hỏi cần hỏi trước khi design</h2>
+            <div class="grid-2">
+              <div class="card">
+                <ul>
+                  <li>Bài toán business là gì?</li>
+                  <li>Độ phức tạp nằm ở workflow, data hay scale?</li>
+                  <li>Team hiện tại vận hành nổi mức phức tạp này không?</li>
+                  <li>Dữ liệu nào cần nhất quán mạnh?</li>
+                </ul>
+              </div>
+              <div class="card">
+                <ul>
+                  <li>Thứ gì được phép chậm, thứ gì không?</li>
+                  <li>Release cần nhanh hay tối ưu cần mạnh?</li>
+                  <li>Nếu system lỗi, doanh nghiệp mất gì?</li>
+                  <li>Boundary nào thật sự thuộc về business capability?</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="adr">
+            <h2>ADR và sai lầm phổ biến</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Mẫu ADR ngắn</h3>
+                <ul>
+                  <li>Context</li>
+                  <li>Decision</li>
+                  <li>Alternatives considered</li>
+                  <li>Consequences</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Sai lầm hay gặp</h3>
+                <ul>
+                  <li>Chọn architecture theo trend</li>
+                  <li>Vẽ diagram đẹp nhưng boundary không thật</li>
+                  <li>Bỏ qua data và observability</li>
+                  <li>Tách service quá sớm</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">Nguồn nội dung gốc: <code>references/architecture-foundations.md</code></div>
+    </div>
+  </body>
+  </html>

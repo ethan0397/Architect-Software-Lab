@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Patterns</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>Patterns theo nhóm vấn đề thay vì học rời rạc</span>
+        </div>
+        <nav class="nav">
+          <a href="./index.html">Trang chủ</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./design-patterns.html" class="active">Patterns</a>
+          <a href="./architecture-foundations.html">Architecture</a>
+          <a href="./system-design-exercises.html">Exercises</a>
+        </nav>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Pattern Atlas</div>
+            <h1>Design Patterns</h1>
+            <p>
+              Học pattern như một bộ công cụ để giải quyết vấn đề thiết kế: tạo object, ghép module,
+              phối hợp hành vi và giữ code dễ thay đổi theo thời gian.
+            </p>
+            <div class="hero-stats">
+              <span class="pill">Creational</span>
+              <span class="pill">Structural</span>
+              <span class="pill">Behavioral</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./assets/patterns-illustration.svg" alt="Patterns illustration" />
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <h2>Mục lục</h2>
+          <nav class="toc">
+            <a href="#map">Bản đồ pattern</a>
+            <a href="#creational">Creational</a>
+            <a href="#structural">Structural</a>
+            <a href="#behavioral">Behavioral</a>
+            <a href="#systems">Pattern theo loại hệ thống</a>
+            <a href="#selection">Chọn pattern nhanh</a>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="section-block" id="map">
+            <h2>Bản đồ pattern</h2>
+            <div class="table-wrap" style="margin-top:18px">
+              <table>
+                <thead>
+                  <tr><th>Nhóm</th><th>Trả lời câu hỏi gì?</th><th>Ví dụ</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Creational</td><td>Tạo object thế nào cho gọn?</td><td>Factory Method, Builder, Singleton</td></tr>
+                  <tr><td>Structural</td><td>Ghép object thế nào cho sạch?</td><td>Adapter, Facade, Decorator, Proxy, Repository</td></tr>
+                  <tr><td>Behavioral</td><td>Phối hợp hành vi thế nào cho rõ?</td><td>Strategy, Observer, Command, State, Template Method, Chain of Responsibility</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note" style="margin-top:18px">
+              <strong>Quy tắc học nhanh</strong>
+              Đừng hỏi “pattern này có hay không”. Hãy hỏi “vấn đề thiết kế ở đây là gì” rồi mới xét pattern nào làm hệ thống đơn giản hơn.
+            </div>
+          </section>
+
+          <section class="section-block" id="creational">
+            <h2>Creational Patterns</h2>
+            <div class="grid-3">
+              <div class="card"><span class="tag blue">Factory Method</span><h3>Gom logic tạo object</h3><p>Dùng khi cần chọn implementation theo config hoặc môi trường.</p></div>
+              <div class="card"><span class="tag blue">Builder</span><h3>Tạo object nhiều bước</h3><p>Hợp với object có nhiều field optional hoặc quy trình dựng phức tạp.</p></div>
+              <div class="card"><span class="tag blue">Singleton</span><h3>Một instance dùng chung</h3><p>Hợp với config hoặc logger gốc, nhưng dễ dẫn tới global state nếu lạm dụng.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="structural">
+            <h2>Structural Patterns</h2>
+            <div class="grid-3">
+              <div class="card"><span class="tag pink">Adapter</span><h3>Tích hợp vendor</h3><p>Chuẩn hóa interface bên ngoài để không làm bẩn domain nội bộ.</p></div>
+              <div class="card"><span class="tag pink">Facade</span><h3>Ẩn flow nhiều bước</h3><p>Gom một use case lớn thành một điểm gọi rõ ràng.</p></div>
+              <div class="card"><span class="tag pink">Decorator</span><h3>Thêm logging/cache/retry</h3><p>Bọc object gốc mà không sửa class gốc.</p></div>
+              <div class="card"><span class="tag pink">Proxy</span><h3>Kiểm soát truy cập</h3><p>Lazy load, access control, remote proxy.</p></div>
+              <div class="card"><span class="tag pink">Repository</span><h3>Bảo vệ domain khỏi ORM</h3><p>Tạo boundary giữa business logic và persistence layer.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="behavioral">
+            <h2>Behavioral Patterns</h2>
+            <div class="grid-3">
+              <div class="card"><span class="tag green">Strategy</span><h3>Nhiều biến thể hành vi</h3><p>Tách `if/else` dài thành từng chiến lược độc lập.</p></div>
+              <div class="card"><span class="tag green">Observer</span><h3>Một event, nhiều phản ứng</h3><p>Publisher phát sự kiện, subscriber tự xử lý phần của mình.</p></div>
+              <div class="card"><span class="tag green">Command</span><h3>Đóng gói action</h3><p>Rất hợp với queue, retry, undo/redo và deferred execution.</p></div>
+              <div class="card"><span class="tag green">State</span><h3>Hành vi theo trạng thái</h3><p>Quản lý lifecycle như order, booking, payment.</p></div>
+              <div class="card"><span class="tag green">Template Method</span><h3>Khung thuật toán cố định</h3><p>Hợp với import pipeline hoặc workflow có skeleton giống nhau.</p></div>
+              <div class="card"><span class="tag green">Chain of Responsibility</span><h3>Nhiều bước xử lý nối tiếp</h3><p>Rất hợp với middleware, validation và approval flow.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="systems">
+            <h2>Pattern theo loại hệ thống</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Loại hệ thống</th><th>Pattern hợp</th><th>Vì sao</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>E-commerce</td><td>Strategy, Factory, Facade, Adapter, State</td><td>Nhiều thanh toán, nhiều bước checkout, nhiều trạng thái order.</td></tr>
+                  <tr><td>Notification</td><td>Strategy, Adapter, Command, Decorator</td><td>Nhiều channel, nhiều provider, cần retry và queue.</td></tr>
+                  <tr><td>Booking</td><td>State, Facade, Command, Repository</td><td>Quản lý reservation lifecycle và timeout logic.</td></tr>
+                  <tr><td>API Gateway</td><td>Chain, Decorator, Proxy</td><td>Request đi qua auth, validate, rate limit, logging.</td></tr>
+                  <tr><td>Workflow / Job</td><td>Command, Observer, State</td><td>Job nền, retry, trạng thái và event sau khi hoàn thành.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section-block" id="selection">
+            <h2>Chọn pattern nhanh</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Nếu bạn thấy...</h3>
+                <ul>
+                  <li>Nhiều `if/else` theo biến thể hành vi -> Strategy</li>
+                  <li>Logic `new` nằm rải khắp nơi -> Factory Method</li>
+                  <li>Object có nhiều tham số -> Builder</li>
+                  <li>API vendor làm bẩn domain -> Adapter</li>
+                  <li>Use case gọi 5-7 service con -> Facade</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Hoặc bạn thấy...</h3>
+                <ul>
+                  <li>Muốn thêm cache/logging/retry -> Decorator</li>
+                  <li>Object có nhiều trạng thái sống -> State</li>
+                  <li>Request qua nhiều bước -> Chain of Responsibility</li>
+                  <li>Action cần queue hoặc undo -> Command</li>
+                  <li>Service dính ORM/SQL -> Repository</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">Nguồn nội dung gốc: <code>references/design-patterns.md</code></div>
+    </div>
+  </body>
+  </html>

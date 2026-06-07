@@ -1,0 +1,41 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="28" fill="#08111A"/>
+  <rect x="24" y="24" width="1152" height="672" rx="24" stroke="#234155" stroke-width="2"/>
+  <text x="48" y="76" fill="#F0F8FF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">System Design Process</text>
+  <text x="48" y="110" fill="#8CA8BF" font-family="Inter, Arial, sans-serif" font-size="18">Một flow học và trình bày system design rõ ràng, có tradeoff</text>
+
+  <circle cx="120" cy="300" r="54" fill="#12243A" stroke="#6FB5FF" stroke-width="3"/>
+  <circle cx="316" cy="300" r="54" fill="#172B25" stroke="#62D89D" stroke-width="3"/>
+  <circle cx="512" cy="300" r="54" fill="#32240F" stroke="#F1C15B" stroke-width="3"/>
+  <circle cx="708" cy="300" r="54" fill="#2E1E37" stroke="#E092FF" stroke-width="3"/>
+  <circle cx="904" cy="300" r="54" fill="#142731" stroke="#70D7E7" stroke-width="3"/>
+  <circle cx="1080" cy="300" r="54" fill="#341A23" stroke="#FF94B6" stroke-width="3"/>
+  <path d="M174 300H262" stroke="#6FB5FF" stroke-width="4"/>
+  <path d="M370 300H458" stroke="#62D89D" stroke-width="4"/>
+  <path d="M566 300H654" stroke="#F1C15B" stroke-width="4"/>
+  <path d="M762 300H850" stroke="#E092FF" stroke-width="4"/>
+  <path d="M958 300H1026" stroke="#70D7E7" stroke-width="4"/>
+
+  <text x="120" y="307" text-anchor="middle" fill="#EFF6FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Req</text>
+  <text x="316" y="307" text-anchor="middle" fill="#F0FFF6" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">NFR</text>
+  <text x="512" y="307" text-anchor="middle" fill="#FFF7E8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Scale</text>
+  <text x="708" y="307" text-anchor="middle" fill="#FFF2FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Flow</text>
+  <text x="904" y="307" text-anchor="middle" fill="#ECFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Risk</text>
+  <text x="1080" y="307" text-anchor="middle" fill="#FFF0F5" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">ADR</text>
+
+  <text x="120" y="384" text-anchor="middle" fill="#B7D7FF" font-family="Inter, Arial, sans-serif" font-size="16">Hiểu bài toán</text>
+  <text x="316" y="384" text-anchor="middle" fill="#B8E9CE" font-family="Inter, Arial, sans-serif" font-size="16">Ràng buộc</text>
+  <text x="512" y="384" text-anchor="middle" fill="#FFE0A1" font-family="Inter, Arial, sans-serif" font-size="16">Ước lượng tải</text>
+  <text x="708" y="384" text-anchor="middle" fill="#E8C3FF" font-family="Inter, Arial, sans-serif" font-size="16">Data flow</text>
+  <text x="904" y="384" text-anchor="middle" fill="#BCEFF4" font-family="Inter, Arial, sans-serif" font-size="16">Failure mode</text>
+  <text x="1080" y="384" text-anchor="middle" fill="#FFC1D5" font-family="Inter, Arial, sans-serif" font-size="16">Quyết định</text>
+
+  <rect x="78" y="472" width="1044" height="144" rx="22" fill="#0D1825" stroke="#2A4760"/>
+  <text x="110" y="520" fill="#EAF2FF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Key Review Axes</text>
+  <rect x="110" y="548" width="130" height="42" rx="12" fill="#132B46"/><text x="175" y="575" text-anchor="middle" fill="#F5FAFF" font-family="Inter, Arial, sans-serif" font-size="18">Scalability</text>
+  <rect x="256" y="548" width="124" height="42" rx="12" fill="#18352D"/><text x="318" y="575" text-anchor="middle" fill="#F3FFF8" font-family="Inter, Arial, sans-serif" font-size="18">Reliability</text>
+  <rect x="396" y="548" width="132" height="42" rx="12" fill="#3D3015"/><text x="462" y="575" text-anchor="middle" fill="#FFF7E8" font-family="Inter, Arial, sans-serif" font-size="18">Consistency</text>
+  <rect x="544" y="548" width="132" height="42" rx="12" fill="#371F43"/><text x="610" y="575" text-anchor="middle" fill="#FFF4FF" font-family="Inter, Arial, sans-serif" font-size="18">Cost</text>
+  <rect x="692" y="548" width="148" height="42" rx="12" fill="#16303A"/><text x="766" y="575" text-anchor="middle" fill="#F2FEFF" font-family="Inter, Arial, sans-serif" font-size="18">Observability</text>
+  <rect x="856" y="548" width="188" height="42" rx="12" fill="#3A1E29"/><text x="950" y="575" text-anchor="middle" fill="#FFF2F6" font-family="Inter, Arial, sans-serif" font-size="18">Cost of Change</text>
+</svg>
