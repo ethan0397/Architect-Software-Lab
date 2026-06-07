@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Architect Learning Roadmap</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>A structured, practical, and expandable learning path</span>
+        </div>
+        <nav class="nav"></nav>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Learning Path</div>
+            <h1>Software Architect Roadmap</h1>
+            <p>
+              Move from code-level design to system design, trade-offs, and architect mindset.
+              This roadmap is centered on real problems rather than disconnected definitions.
+            </p>
+            <div class="hero-stats">
+              <span class="pill">6 months</span>
+              <span class="pill">8-10 hours / week</span>
+              <span class="pill">Project-based learning</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./assets/architecture-illustration.svg" alt="Architecture roadmap illustration" />
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <h2>Contents</h2>
+          <nav class="toc">
+            <a href="#overview">Overview</a>
+            <a href="#pillars">Five capability pillars</a>
+            <a href="#timeline">Six-month plan</a>
+            <a href="#book-track">Book track</a>
+            <a href="#fundamentals-track">Fundamentals track</a>
+            <a href="#weekly">Weekly rhythm</a>
+            <a href="#projects">Portfolio projects</a>
+            <a href="#milestones">Self-check milestones</a>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="section-block" id="overview">
+            <h2>Overview</h2>
+            <p>
+              A software architect is not just someone who draws diagrams. The role requires
+              understanding business goals, translating them into a working system, and keeping that
+              system adaptable through many rounds of change.
+            </p>
+            <div class="table-wrap" style="margin-top:18px">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Phase</th>
+                    <th>Focus</th>
+                    <th>Expected outcome</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Months 1-2</td>
+                    <td>Code fundamentals and patterns</td>
+                    <td>Write clear, testable code and recognize design problems early</td>
+                  </tr>
+                  <tr>
+                    <td>Months 3-4</td>
+                    <td>Application architecture and distributed systems</td>
+                    <td>Design better boundaries and understand consistency, retry, and timeout issues</td>
+                  </tr>
+                  <tr>
+                    <td>Months 5-6</td>
+                    <td>Trade-offs, system design, and architect mindset</td>
+                    <td>Choose the right structure and justify decisions through ADRs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section-block" id="pillars">
+            <h2>Five capability pillars</h2>
+            <div class="grid-3">
+              <div class="card">
+                <span class="tag blue">Code-Level</span>
+                <h3>Code-Level Design</h3>
+                <p>Clean code, refactoring, SOLID, testability, and design patterns.</p>
+              </div>
+              <div class="card">
+                <span class="tag green">Application</span>
+                <h3>Application Architecture</h3>
+                <p>Layered architecture, modular monolith, hexagonal design, and DDD basics.</p>
+              </div>
+              <div class="card">
+                <span class="tag gold">System</span>
+                <h3>System Architecture</h3>
+                <p>Scalability, caching, messaging, consistency, and resiliency.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">Operations</span>
+                <h3>Operations Thinking</h3>
+                <p>Logging, metrics, tracing, deployment, and incident mindset.</p>
+              </div>
+              <div class="card">
+                <span class="tag pink">Decision</span>
+                <h3>Decision Making</h3>
+                <p>Trade-off analysis, ADRs, risk estimation, and business-driven prioritization.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="timeline">
+            <h2>Six-month plan</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="tag blue">Month 1</span>
+                <h3>Technical foundations</h3>
+                <p>OOP, SOLID, cohesion, coupling, clean code, refactoring, unit testing, and testability.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag green">Month 2</span>
+                <h3>Core design patterns</h3>
+                <p>Strategy, Factory Method, Builder, Adapter, Facade, Observer, Command, Decorator, Repository, and Dependency Injection.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag gold">Month 3</span>
+                <h3>Application Architecture</h3>
+                <p>Layered architecture, clean architecture, hexagonal architecture, modular monolith, and the start of the Hard Parts track with coupling, modularity, and decomposition.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag pink">Month 4</span>
+                <h3>Data and Distributed Systems</h3>
+                <p>Transactions, locking, cache-aside, message queues, eventual consistency, idempotency, timeout, retry, circuit breaker, plus data decomposition and service granularity.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag cyan">Month 5</span>
+                <h3>Architecture Styles and Trade-offs</h3>
+                <p>Monolith, modular monolith, microservices, event-driven architecture, serverless, DDD strategic design, along with data ownership, distributed access, workflow, and sagas.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag blue">Month 6</span>
+                <h3>System Design and Architect Mindset</h3>
+                <p>Non-functional requirements, capacity estimation, service boundaries, observability, security basics, architecture review, contracts, data mesh, and trade-off analysis.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="book-track">
+            <h2>Book Track: Software Architecture: The Hard Parts</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>How it fits into the roadmap</h3>
+                <ul>
+                  <li>Month 3: coupling, modularity, decomposition</li>
+                  <li>Month 4: data decomposition, service granularity</li>
+                  <li>Month 5: reuse, data ownership, distributed access, workflow, sagas</li>
+                  <li>Month 6: contracts, analytical data, data mesh, trade-off analysis</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>Why add this track</strong>
+                This is the part that shifts the roadmap from “knowing concepts” to “making
+                decisions.” If architecture foundations are the skeleton, this book is where you
+                train on the hardest distributed architecture problems.
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="fundamentals-track">
+            <h2>Book Track: Fundamentals of Software Architecture</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>How it fits into the roadmap</h3>
+                <ul>
+                  <li>Months 1-2: architect role, modularity, characteristics</li>
+                  <li>Month 3: governance, quanta, component thinking</li>
+                  <li>Months 4-5: architecture styles survey and style selection</li>
+                  <li>Month 6: decisions, risk, diagramming, leadership</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>What this track does</strong>
+                If `Hard Parts` gives you distributed architecture depth, `Fundamentals` gives you
+                the base language and evaluation model to understand architecture as an engineering discipline.
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="weekly">
+            <h2>Weekly rhythm</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Suggested cadence</h3>
+                <ul>
+                  <li>2 hours of theory</li>
+                  <li>3 hours of small coding exercises</li>
+                  <li>2 hours of refactoring old code</li>
+                  <li>1 hour of diagramming</li>
+                  <li>1-2 hours of review and note-taking</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>Remember</strong>
+                If you only read and never draw or refactor, the knowledge will not stick. The
+                effective loop is: read -> code -> refactor -> draw -> review.
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="projects">
+            <h2>Portfolio projects</h2>
+            <div class="grid-2">
+              <div class="card"><h3>E-commerce Monolith</h3><p>User, catalog, cart, order, and payment facade with clear boundaries.</p></div>
+              <div class="card"><h3>Booking System</h3><p>Availability, reservation, booking timeouts, and event-driven notifications.</p></div>
+              <div class="card"><h3>Notification Platform</h3><p>Email, SMS, and push delivery with Strategy, Factory, and Queue patterns.</p></div>
+              <div class="card"><h3>Order Processing System</h3><p>A simple saga flow with retry, idempotency, and outbox pattern.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="milestones">
+            <h2>Self-check milestones</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>By the end of six months, you should be able to</h3>
+                <ul>
+                  <li>Distinguish between design patterns and architecture styles</li>
+                  <li>Explain trade-offs clearly</li>
+                  <li>Design good boundaries and dependency direction</li>
+                  <li>Explain why data consistency is difficult</li>
+                  <li>Present a coherent system design to a team</li>
+                </ul>
+              </div>
+              <div class="image-panel panel">
+                <img src="./assets/system-design-illustration.svg" alt="System design illustration" />
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">Source content: <code>references/roadmap.md</code></div>
+    </div>
+    <script src="./assets/site.js"></script>
+  </body>
+  </html>

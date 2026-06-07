@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Architect Study Guide</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body class="home-page">
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>Study hub for roadmap, patterns, architecture, and system design practice</span>
+        </div>
+        <nav class="nav"></nav>
+      </div>
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div>
+              <div class="eyebrow">Build • Design • Scale</div>
+              <h1>Software Architect Study Guide</h1>
+              <p>
+                A compact study site that brings together a roadmap, design patterns, architecture
+                foundations, system design exercises, and a Hard Parts book track. The focus is on
+                understanding problems, seeing trade-offs, and choosing the right structure for each system.
+              </p>
+              <div class="chips">
+                <span class="chip">Design Patterns</span>
+                <span class="chip">Architecture Styles</span>
+                <span class="chip">System Design</span>
+                <span class="chip">ADR & Trade-offs</span>
+                <span class="chip">Hard Parts Book Track</span>
+                <span class="chip">Fundamentals Book Track</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-art">
+            <img src="./assets/architecture-illustration.svg" alt="Architecture illustration" />
+          </div>
+        </div>
+      </section>
+
+        <section class="band">
+          <div class="section">
+            <h2>Learning map</h2>
+            <p>
+              Study in layers: code fundamentals, patterns, application architecture, distributed
+              systems, then system design and decision making. Each section below is designed to make
+              structure visible before depth.
+            </p>
+
+            <div class="tiles">
+              <article class="tile">
+                <img src="./assets/patterns-illustration.svg" alt="Design patterns illustration" />
+                <div class="tile-body">
+                  <h3>Design Patterns</h3>
+                  <p>Learn patterns by problem type: object creation, module composition, and behavior coordination.</p>
+                  <ul class="tile-points">
+                    <li>Factory, Builder, Singleton</li>
+                    <li>Adapter, Facade, Decorator, Proxy</li>
+                    <li>Strategy, State, Observer, Command</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="tile">
+                <img src="./assets/architecture-illustration.svg" alt="Architecture foundations illustration" />
+                <div class="tile-body">
+                  <h3>Architecture Foundations</h3>
+                  <p>See systems through boundaries, dependency direction, persistence, and event flow.</p>
+                  <ul class="tile-points">
+                    <li>Layered, Modular Monolith, Hexagonal</li>
+                    <li>Microservices and Event-Driven</li>
+                    <li>NFRs, team ownership, cost of change</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="tile">
+                <img src="./assets/system-design-illustration.svg" alt="System design illustration" />
+                <div class="tile-body">
+                  <h3>System Design</h3>
+                  <p>Move from requirements, NFRs, and scale to data flow, failure modes, and ADRs.</p>
+                  <ul class="tile-points">
+                    <li>URL Shortener, Order Flow, Booking</li>
+                    <li>Notification, Audit Log</li>
+                    <li>Review checklist and portfolio format</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="tile">
+                <img src="./assets/architecture-illustration.svg" alt="Software architecture hard parts illustration" />
+                <div class="tile-body">
+                  <h3>Hard Parts Book Track</h3>
+                  <p>Study the book track to practice coupling, data ownership, distributed workflows, and trade-off analysis.</p>
+                  <ul class="tile-points">
+                    <li>Modularity, decomposition, service granularity</li>
+                    <li>Distributed access, sagas, contracts, data mesh</li>
+                    <li>ADR, fitness functions, and decision mindset</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="tile">
+                <img src="./assets/architecture-illustration.svg" alt="Software architecture fundamentals illustration" />
+                <div class="tile-body">
+                  <h3>Fundamentals Book Track</h3>
+                  <p>Study the book track to build foundations in architectural thinking, styles, risk, diagramming, and architect skills.</p>
+                  <ul class="tile-points">
+                    <li>Modularity, characteristics, governance</li>
+                    <li>Architecture styles and style selection</li>
+                    <li>ADR, risk analysis, leadership</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section">
+            <h2>Six-month roadmap</h2>
+            <p>
+              Split into three rhythms: code-level design, application/system architecture, and
+              architect mindset. The Hard Parts track deepens distributed architecture decisions from
+              months 3 through 6.
+            </p>
+            <div class="roadmap">
+              <div class="roadmap-card">
+                <div class="kicker">Months 1-2</div>
+                <h3>Code-Level Design</h3>
+                <p>OOP, SOLID, cohesion, coupling, refactoring, unit tests, and core patterns.</p>
+              </div>
+              <div class="roadmap-card">
+                <div class="kicker">Months 3-4</div>
+                <h3>Application & Distributed Systems</h3>
+                <p>Boundaries, modular monolith, hexagonal architecture, data consistency, retry, and timeout handling.</p>
+              </div>
+              <div class="roadmap-card">
+                <div class="kicker">Months 5-6</div>
+                <h3>Trade-offs & System Design</h3>
+                <p>Choose architecture styles, design systems, evaluate NFRs, write ADRs, and explain decisions clearly.</p>
+              </div>
+              <div class="roadmap-card">
+                <div class="kicker">Companion Track</div>
+                <h3>Software Architecture: The Hard Parts</h3>
+                <p>Follow the book to study coupling, data ownership, workflows, sagas, contracts, and trade-off analysis.</p>
+              </div>
+              <div class="roadmap-card">
+                <div class="kicker">Foundation Track</div>
+                <h3>Fundamentals of Software Architecture</h3>
+                <p>Follow the book to learn architectural thinking, modularity, styles, risk, governance, and architect leadership.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section">
+            <h2>How to study effectively</h2>
+            <p>
+              This site is strongest when you read, redraw, and then apply the ideas to a project of
+              your own. Do not treat patterns like flashcards. Treat them as reusable responses to real problems.
+            </p>
+            <div class="notes">
+              <div class="note">
+                <h3>Suggested reading order</h3>
+                <ul>
+                  <li>Read the roadmap first to get the full picture.</li>
+                  <li>Read design patterns to build code-level and module-level tools.</li>
+                  <li>Read architecture foundations to understand structure and boundaries.</li>
+                  <li>Work through system design exercises to build design reflexes.</li>
+                  <li>Add the Hard Parts book track to practice tough distributed-architecture decisions.</li>
+                  <li>Add the Fundamentals book track to build engineering-oriented architecture foundations.</li>
+                </ul>
+              </div>
+              <div class="note">
+                <h3>How to self-check</h3>
+                <ul>
+                  <li>Can you explain the topic with a real example?</li>
+                  <li>Can you draw it clearly?</li>
+                  <li>Can you name the trade-offs?</li>
+                  <li>Do you know when not to use it?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section">
+            <h2>Explore each area</h2>
+            <p>This page is the entry point. Choose one of the sections below and study in the order that fits your current need.</p>
+            <div class="files">
+              <div class="file-card">
+                <h3>Roadmap</h3>
+                <p>A six-month path, weekly rhythm, milestones, and portfolio project ideas.</p>
+                <a class="file-link" href="./roadmap.en.html">Open roadmap</a>
+              </div>
+              <div class="file-card">
+                <h3>Design Patterns</h3>
+                <p>Pattern groups, system examples, visuals, and a practical pattern selection guide.</p>
+                <a class="file-link" href="./design-patterns.en.html">Open patterns</a>
+              </div>
+              <div class="file-card">
+                <h3>Architecture Foundations</h3>
+                <p>Core principles, architecture styles, NFRs, and decision-making basics.</p>
+                <a class="file-link" href="./architecture-foundations.en.html">Open architecture foundations</a>
+              </div>
+              <div class="file-card">
+                <h3>System Design Exercises</h3>
+                <p>Practice cases, review checklist, focus points, and a portfolio-oriented exercise format.</p>
+                <a class="file-link" href="./system-design-exercises.en.html">Open system design exercises</a>
+              </div>
+              <div class="file-card">
+                <h3>Hard Parts Book Track</h3>
+                <p>A study module based on <code>Software Architecture: The Hard Parts</code>, focused on trade-offs and distributed architecture.</p>
+                <a class="file-link" href="./hard-parts.en.html">Open book track</a>
+              </div>
+              <div class="file-card">
+                <h3>Fundamentals Book Track</h3>
+                <p>A study module based on <code>Fundamentals of Software Architecture</code>, focused on foundations, styles, and architect skills.</p>
+                <a class="file-link" href="./fundamentals.en.html">Open fundamentals track</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <footer>
+        This study site can be opened directly in a browser or published through GitHub Pages.
+      </footer>
+    </div>
+    <script src="./assets/site.js"></script>
+  </body>
+</html>

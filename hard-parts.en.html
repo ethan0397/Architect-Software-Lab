@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Architecture: The Hard Parts</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>Book track for trade-off analysis in distributed architecture</span>
+        </div>
+        <nav class="nav"></nav>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Book Course</div>
+            <h1>Software Architecture: The Hard Parts</h1>
+            <p>
+              A book-based track focused on the decisions that are actually hard: where to split a
+              system, who owns the data, how distributed workflows should be reassembled, and how to
+              speak in trade-offs instead of best practices.
+            </p>
+            <div class="hero-stats">
+              <span class="pill">Coupling</span>
+              <span class="pill">Data Ownership</span>
+              <span class="pill">Sagas</span>
+              <span class="pill">Trade-Off Analysis</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./assets/architecture-illustration.svg" alt="Architecture trade-off illustration" />
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <h2>Contents</h2>
+          <nav class="toc">
+            <a href="#why">Why this track matters</a>
+            <a href="#chapter-map">Book chapter map</a>
+            <a href="#modules">Eight learning modules</a>
+            <a href="#schedule">Six-week schedule</a>
+            <a href="#labs">Applied labs</a>
+            <a href="#signals">Signals that it clicked</a>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="section-block" id="why">
+            <h2>Why this track matters</h2>
+            <p>
+              Many architecture resources teach concepts. This book teaches decision making when no
+              perfect answer exists. It is especially strong for distributed architecture, where
+              coupling, workflows, and data ownership constantly pull against each other.
+            </p>
+            <div class="grid-3">
+              <div class="card">
+                <span class="tag blue">Decision</span>
+                <h3>Leave silver-bullet thinking behind</h3>
+                <p>Stop asking which architecture is “best” and start asking which option best fits the current context.</p>
+              </div>
+              <div class="card">
+                <span class="tag gold">Data</span>
+                <h3>See data as an architectural force</h3>
+                <p>Data ownership, transactions, and analytical flows strongly shape the way systems should be split.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">Practice</span>
+                <h3>Learn through real decisions</h3>
+                <p>ADRs, workflows, sagas, granularity, and contracts are studied as operational architecture problems.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="chapter-map">
+            <h2>Book chapter map</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Chapter group</th>
+                    <th>Focus</th>
+                    <th>Question to ask yourself</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Chapter 1</td>
+                    <td>Architecture without universal best practices</td>
+                    <td>How are context, data, and fitness functions shaping the decision?</td>
+                  </tr>
+                  <tr>
+                    <td>Chapters 2-7</td>
+                    <td>Pulling Things Apart</td>
+                    <td>Should I split by coupling, components, data domain, or service granularity?</td>
+                  </tr>
+                  <tr>
+                    <td>Chapters 8-14</td>
+                    <td>Putting Things Back Together</td>
+                    <td>After splitting, how should reuse, contracts, workflows, and data access be reassembled?</td>
+                  </tr>
+                  <tr>
+                    <td>Chapter 15</td>
+                    <td>Trade-Off Analysis</td>
+                    <td>Which alternative is better in this business, team, and operations context?</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note" style="margin-top:18px">
+              <strong>The key point</strong>
+              Splitting a system is only half the story. The second half is accepting the new kinds
+              of coupling that appear and managing them through ownership, contracts, workflows, and
+              explicit trade-offs.
+            </div>
+          </section>
+
+          <section class="section-block" id="modules">
+            <h2>Eight learning modules</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="tag blue">Module 1</span>
+                <h3>Decision Mindset</h3>
+                <p>Start with context, ADRs, fitness functions, and the mindset that there is no single best practice.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag green">Module 2</span>
+                <h3>Coupling and Architecture Quantum</h3>
+                <p>Understand static coupling, dynamic coupling, and the parts that still need to be deployed together.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag gold">Module 3</span>
+                <h3>Modularity and Decomposition</h3>
+                <p>Learn component boundaries, decomposition drivers, and how to refactor a codebase with blurry seams.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag pink">Module 4</span>
+                <h3>Data Decomposition and Service Granularity</h3>
+                <p>Split data gradually, judge service size realistically, and notice where transactions glue things back together.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag cyan">Module 5</span>
+                <h3>Reuse, Data Ownership, and Distributed Access</h3>
+                <p>Choose between shared libraries, shared services, sidecars, platforms, and cross-service data access patterns.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag blue">Module 6</span>
+                <h3>Workflow, Orchestration, Choreography, and Sagas</h3>
+                <p>Design distributed workflows with state, compensating actions, and explicit eventual consistency.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag green">Module 7</span>
+                <h3>Contracts and Analytical Data</h3>
+                <p>Manage strict versus loose contracts, avoid stamp coupling, and separate operational and analytical flows.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag gold">Module 8</span>
+                <h3>Trade-Off Analysis Lab</h3>
+                <p>Pull everything together in an architecture review with alternatives, risks, and a clear conclusion.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="schedule">
+            <h2>Six-week schedule</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Suggested pace</h3>
+                <ul>
+                  <li>Week 1: chapters 1-2, write the first ADR and mark coupling points</li>
+                  <li>Week 2: chapters 3-5, redraw the component map and domain boundaries</li>
+                  <li>Week 3: chapters 6-7, split data domains and assess granularity</li>
+                  <li>Week 4: chapters 8-10, choose reuse patterns and distributed data access</li>
+                  <li>Week 5: chapters 11-13, build a workflow using choreography or sagas</li>
+                  <li>Week 6: chapters 14-15, complete a full trade-off analysis</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>The most effective way to study it</strong>
+                Read a chapter cluster, summarize it with a diagram, apply it to a real case in your
+                head, and then write the decision as if you had to explain it to a team.
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="labs">
+            <h2>Applied labs</h2>
+            <div class="grid-3">
+              <div class="card">
+                <span class="tag pink">Case A</span>
+                <h3>Order Processing</h3>
+                <p>Decide ownership across order, payment, and inventory, choose workflow style, and list compensating actions.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">Case B</span>
+                <h3>Internal Platform</h3>
+                <p>Decide whether common logic should live in a library, shared service, sidecar, or platform capability.</p>
+              </div>
+              <div class="card">
+                <span class="tag gold">Case C</span>
+                <h3>Booking System</h3>
+                <p>Assess reservation state ownership, strong consistency needs, timeout handling, and analytical data pipelines.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="signals">
+            <h2>Signals that the track clicked</h2>
+            <div class="grid-2">
+              <div class="card">
+                <ul>
+                  <li>You can name two or three competing trade-off dimensions instead of one preferred solution.</li>
+                  <li>You can explain why an imperfect boundary is still acceptable in a given context.</li>
+                  <li>You can tell the difference between splitting for lower coupling and splitting for appearance.</li>
+                  <li>You can write a short ADR that teammates immediately understand.</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>How it connects to the rest of the site</h3>
+                <ul>
+                  <li>Use <code>Architecture Foundations</code> for the base concepts behind coupling, modularity, and NFRs.</li>
+                  <li>Use <code>System Design Exercises</code> to practice workflows and trade-off analysis.</li>
+                  <li>Go back to <code>Design Patterns</code> when you need component-level or integration-level solutions.</li>
+                  <li>Anchor this track in months 3-6 of the roadmap to deepen decision-making ability.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">Source content: <code>references/hard-parts.md</code></div>
+    </div>
+    <script src="./assets/site.js"></script>
+  </body>
+  </html>

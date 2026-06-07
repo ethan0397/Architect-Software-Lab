@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Architecture: The Hard Parts</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>Book track về trade-off analysis cho distributed architecture</span>
+        </div>
+        <nav class="nav"></nav>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Book Course</div>
+            <h1>Software Architecture: The Hard Parts</h1>
+            <p>
+              Track học theo sách để luyện đúng những quyết định khó: tách hệ thống ở đâu, dữ liệu
+              thuộc về ai, workflow phân tán nên ghép kiểu nào, và làm sao nói chuyện bằng trade-off
+              thay vì bằng best practice.
+            </p>
+            <div class="hero-stats">
+              <span class="pill">Coupling</span>
+              <span class="pill">Data Ownership</span>
+              <span class="pill">Sagas</span>
+              <span class="pill">Trade-Off Analysis</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./assets/architecture-illustration.svg" alt="Architecture tradeoff illustration" />
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <h2>Mục lục</h2>
+          <nav class="toc">
+            <a href="#why">Vì sao nên học track này</a>
+            <a href="#chapter-map">Bản đồ chương sách</a>
+            <a href="#modules">8 module học</a>
+            <a href="#schedule">Lịch học 6 tuần</a>
+            <a href="#labs">Lab áp dụng</a>
+            <a href="#signals">Dấu hiệu đã ngấm</a>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="section-block" id="why">
+            <h2>Vì sao nên học track này</h2>
+            <p>
+              Nhiều tài liệu architecture dạy bạn khái niệm. Cuốn này dạy bạn ra quyết định khi không
+              có đáp án đẹp tuyệt đối. Nó đặc biệt mạnh ở các bài toán distributed architecture, nơi
+              coupling, workflow và data ownership luôn giằng co với nhau.
+            </p>
+            <div class="grid-3">
+              <div class="card">
+                <span class="tag blue">Decision</span>
+                <h3>Bỏ tư duy silver bullet</h3>
+                <p>Không còn hỏi kiến trúc nào tốt nhất, mà hỏi phương án nào phù hợp nhất với context hiện tại.</p>
+              </div>
+              <div class="card">
+                <span class="tag gold">Data</span>
+                <h3>Nhìn dữ liệu như yếu tố kiến trúc</h3>
+                <p>Data ownership, transaction và analytical flow quyết định rất mạnh cách bạn tách system.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">Practice</span>
+                <h3>Học bằng quyết định thật</h3>
+                <p>ADR, workflow, saga, granularity và contract đều được học như bài toán thực chiến.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="chapter-map">
+            <h2>Bản đồ chương sách</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Cụm chương</th>
+                    <th>Trọng tâm</th>
+                    <th>Câu hỏi nên tự trả lời</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Chương 1</td>
+                    <td>Architecture không có best practice tuyệt đối</td>
+                    <td>Context, data và fitness function đang ép quyết định của mình ra sao?</td>
+                  </tr>
+                  <tr>
+                    <td>Chương 2-7</td>
+                    <td>Pulling Things Apart</td>
+                    <td>Nên tách theo coupling, component, data domain hay granularity nào?</td>
+                  </tr>
+                  <tr>
+                    <td>Chương 8-14</td>
+                    <td>Putting Things Back Together</td>
+                    <td>Khi đã tách rồi, ghép lại bằng reuse, contract, workflow và data access thế nào?</td>
+                  </tr>
+                  <tr>
+                    <td>Chương 15</td>
+                    <td>Trade-Off Analysis</td>
+                    <td>Alternative nào đang tốt hơn trong bối cảnh business, team và vận hành này?</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note" style="margin-top:18px">
+              <strong>Mấu chốt của sách</strong>
+              Tách hệ thống chỉ là nửa đầu câu chuyện. Nửa còn lại là chấp nhận các coupling mới xuất hiện
+              rồi quản lý chúng bằng ownership, contract, workflow và trade-off rõ ràng.
+            </div>
+          </section>
+
+          <section class="section-block" id="modules">
+            <h2>8 module học</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="tag blue">Module 1</span>
+                <h3>Decision Mindset</h3>
+                <p>Bắt đầu bằng context, ADR, fitness function và tư duy "không có best practice tuyệt đối".</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag green">Module 2</span>
+                <h3>Coupling và Architecture Quantum</h3>
+                <p>Nhìn static coupling, dynamic coupling và những phần thực tế vẫn phải deploy cùng nhau.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag gold">Module 3</span>
+                <h3>Modularity và Decomposition</h3>
+                <p>Học component boundary, decomposition driver và cách refactor một codebase đang mờ ranh giới.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag pink">Module 4</span>
+                <h3>Data Decomposition và Service Granularity</h3>
+                <p>Tách dữ liệu dần dần, đánh giá độ nhỏ hợp lý của service và nhận ra nơi transaction kéo mọi thứ dính lại.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag cyan">Module 5</span>
+                <h3>Reuse, Data Ownership, Distributed Access</h3>
+                <p>Chọn giữa shared library, shared service, sidecar, platform và pattern truy cập data liên service.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag blue">Module 6</span>
+                <h3>Workflow, Orchestration, Choreography, Saga</h3>
+                <p>Thiết kế workflow phân tán có state, compensating action và eventual consistency có chủ đích.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag green">Module 7</span>
+                <h3>Contracts và Analytical Data</h3>
+                <p>Quản lý strict hay loose contract, tránh stamp coupling và tách operational flow khỏi analytical flow.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag gold">Module 8</span>
+                <h3>Trade-Off Analysis Lab</h3>
+                <p>Tổng hợp tất cả vào một bài review kiến trúc có alternatives, risk và kết luận rõ ràng.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="schedule">
+            <h2>Lịch học 6 tuần</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Tiến độ đề xuất</h3>
+                <ul>
+                  <li>Tuần 1: chương 1-2, viết ADR đầu tiên và đánh dấu coupling</li>
+                  <li>Tuần 2: chương 3-5, vẽ lại component map và domain boundary</li>
+                  <li>Tuần 3: chương 6-7, tách data domain và đánh giá granularity</li>
+                  <li>Tuần 4: chương 8-10, chọn reuse pattern và distributed data access</li>
+                  <li>Tuần 5: chương 11-13, dựng workflow, choreography hoặc saga</li>
+                  <li>Tuần 6: chương 14-15, hoàn thành trade-off analysis hoàn chỉnh</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>Cách học hiệu quả nhất</strong>
+                Đọc một cụm chương, tóm tắt lại bằng sơ đồ, áp vào một case thật trong đầu, rồi viết ra
+                quyết định như đang giải trình với team. Nếu chỉ đọc mà không viết ADR hoặc không vẽ flow,
+                bạn sẽ rất khó biến nội dung sách thành phản xạ.
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="labs">
+            <h2>Lab áp dụng</h2>
+            <div class="grid-3">
+              <div class="card">
+                <span class="tag pink">Case A</span>
+                <h3>Order Processing</h3>
+                <p>Xác định ownership giữa order, payment, inventory; chọn workflow style; liệt kê compensating action.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">Case B</span>
+                <h3>Internal Platform</h3>
+                <p>Quyết định phần dùng chung nên là library, shared service, sidecar hay platform capability.</p>
+              </div>
+              <div class="card">
+                <span class="tag gold">Case C</span>
+                <h3>Booking System</h3>
+                <p>Đánh giá reservation state, consistency mạnh, timeout và analytical pipeline cho dữ liệu đặt chỗ.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="signals">
+            <h2>Dấu hiệu bạn đã ngấm track này</h2>
+            <div class="grid-2">
+              <div class="card">
+                <ul>
+                  <li>Bạn nói được 2-3 chiều trade-off thay vì chỉ nêu một giải pháp.</li>
+                  <li>Bạn biết boundary nào chưa đẹp nhưng vẫn tạm chấp nhận vì context.</li>
+                  <li>Bạn phân biệt được tách để giảm coupling với tách chỉ để trông hiện đại.</li>
+                  <li>Bạn viết được ADR ngắn và người khác hiểu vì sao bạn chọn hướng đó.</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Nối với các phần khác</h3>
+                <ul>
+                  <li>Dùng <code>Architecture Foundations</code> làm nền cho coupling, modularity và NFR.</li>
+                  <li>Dùng <code>System Design Exercises</code> làm nơi luyện workflow và trade-off analysis.</li>
+                  <li>Quay lại <code>Design Patterns</code> khi cần giải quyết component hoặc integration ở mức code.</li>
+                  <li>Gắn track này vào tháng 3-6 của roadmap để tăng chiều sâu decision making.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">Nguồn nội dung gốc: <code>references/hard-parts.md</code></div>
+    </div>
+    <script src="./assets/site.js"></script>
+  </body>
+</html>

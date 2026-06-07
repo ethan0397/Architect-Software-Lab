@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Architecture Foundations</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>Foundational principles for seeing systems clearly</span>
+        </div>
+        <nav class="nav"></nav>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Foundations</div>
+            <h1>Architecture Foundations</h1>
+            <p>
+              The structural backbone of the whole study guide: responsibilities, boundaries,
+              dependencies, architecture styles, non-functional requirements, and ADR-based decision
+              making.
+            </p>
+            <div class="hero-stats">
+              <span class="pill">Boundary</span>
+              <span class="pill">Dependency Direction</span>
+              <span class="pill">NFR</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./assets/architecture-illustration.svg" alt="Architecture illustration" />
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <h2>Contents</h2>
+          <nav class="toc">
+            <a href="#principles">Core principles</a>
+            <a href="#code-to-arch">From code to architecture</a>
+            <a href="#styles">Architecture styles</a>
+            <a href="#nfr">Non-functional requirements</a>
+            <a href="#questions">Questions to ask before design</a>
+            <a href="#adr">ADR and common mistakes</a>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="section-block" id="principles">
+            <h2>Core principles</h2>
+            <div class="grid-2">
+              <div class="card"><span class="tag blue">Separation</span><h3>Separation of Concerns</h3><p>Each part should have one primary type of responsibility. Mixing UI, business logic, and persistence makes change painful.</p></div>
+              <div class="card"><span class="tag green">Cohesion</span><h3>High Cohesion</h3><p>Things that belong together should stay close together for easier understanding and change.</p></div>
+              <div class="card"><span class="tag pink">Coupling</span><h3>Low Coupling</h3><p>Modules should know as little as possible about one another to reduce blast radius during change.</p></div>
+              <div class="card"><span class="tag gold">Boundary</span><h3>Explicit Boundaries</h3><p>Clear boundaries improve work division, testing, and the longevity of architecture.</p></div>
+              <div class="card"><span class="tag cyan">Dependency</span><h3>Dependency Direction</h3><p>High-level code should not depend on low-level details. The domain should survive framework changes.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="code-to-arch">
+            <h2>From code to architecture</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Evolution chain</h3>
+                <ul>
+                  <li>Classes</li>
+                  <li>Modules</li>
+                  <li>Components</li>
+                  <li>Services</li>
+                  <li>System Landscape</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>Remember</strong>
+                Architecture does not appear from nowhere. It is the accumulated result of many small
+                decisions at the class, module, and dependency level.
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="styles">
+            <h2>Architecture Styles</h2>
+            <div class="grid-2">
+              <div class="card"><span class="tag blue">Layered</span><h3>Layered Architecture</h3><p>Easy to understand and easy to start with, good for many CRUD systems, but can lead to an anemic domain if loosely organized.</p></div>
+              <div class="card"><span class="tag green">Modular Monolith</span><h3>Modular Monolith</h3><p>A strong fit for most new products: one deployment, but with clear modules and boundaries.</p></div>
+              <div class="card"><span class="tag gold">Hexagonal</span><h3>Hexagonal Architecture</h3><p>Places the domain at the center and adapters on the outside. Excellent for testability and infrastructure replacement.</p></div>
+              <div class="card"><span class="tag pink">Microservices</span><h3>Microservices</h3><p>Useful when business boundaries are clear, teams are large enough, and independent deployment matters. The cost is distributed complexity.</p></div>
+              <div class="card"><span class="tag cyan">Event-Driven</span><h3>Event-Driven Architecture</h3><p>Great for notification, analytics, and asynchronous workflows, but it requires a strong understanding of eventual consistency and idempotency.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="nfr">
+            <h2>Non-Functional Requirements</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>NFR</th><th>What it means in design</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Performance</td><td>How fast must the system respond?</td></tr>
+                  <tr><td>Scalability</td><td>How does the system expand under higher load?</td></tr>
+                  <tr><td>Availability</td><td>How much downtime is acceptable?</td></tr>
+                  <tr><td>Reliability</td><td>How will failures be handled and recovered from?</td></tr>
+                  <tr><td>Observability</td><td>How will we know where the system is failing?</td></tr>
+                  <tr><td>Cost Efficiency</td><td>Is the architecture worth its operational cost?</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section-block" id="questions">
+            <h2>Questions to ask before design</h2>
+            <div class="grid-2">
+              <div class="card">
+                <ul>
+                  <li>What is the business problem?</li>
+                  <li>Is the real complexity in workflow, data, or scale?</li>
+                  <li>Can the current team operate this level of complexity?</li>
+                  <li>Which data requires strong consistency?</li>
+                </ul>
+              </div>
+              <div class="card">
+                <ul>
+                  <li>What can be slow, and what cannot?</li>
+                  <li>Do we need faster releases or stronger optimization first?</li>
+                  <li>If the system fails, what does the business lose?</li>
+                  <li>Which boundaries truly map to business capabilities?</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="adr">
+            <h2>ADR and common mistakes</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Short ADR template</h3>
+                <ul>
+                  <li>Context</li>
+                  <li>Decision</li>
+                  <li>Alternatives considered</li>
+                  <li>Consequences</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Frequent mistakes</h3>
+                <ul>
+                  <li>Choosing architecture by trend</li>
+                  <li>Drawing pretty diagrams with fake boundaries</li>
+                  <li>Ignoring data and observability</li>
+                  <li>Splitting services too early</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">Source content: <code>references/architecture-foundations.md</code></div>
+    </div>
+    <script src="./assets/site.js"></script>
+  </body>
+  </html>

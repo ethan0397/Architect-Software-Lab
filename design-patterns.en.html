@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Patterns</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>Patterns grouped by problem type instead of memorized in isolation</span>
+        </div>
+        <nav class="nav"></nav>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Pattern Atlas</div>
+            <h1>Design Patterns</h1>
+            <p>
+              Learn patterns as a toolbox for solving design problems: creating objects, composing
+              modules, coordinating behavior, and keeping code easy to evolve over time.
+            </p>
+            <div class="hero-stats">
+              <span class="pill">Creational</span>
+              <span class="pill">Structural</span>
+              <span class="pill">Behavioral</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./assets/patterns-illustration.svg" alt="Patterns illustration" />
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <h2>Contents</h2>
+          <nav class="toc">
+            <a href="#map">Pattern map</a>
+            <a href="#creational">Creational</a>
+            <a href="#structural">Structural</a>
+            <a href="#behavioral">Behavioral</a>
+            <a href="#systems">Patterns by system type</a>
+            <a href="#selection">Quick selection guide</a>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="section-block" id="map">
+            <h2>Pattern map</h2>
+            <div class="table-wrap" style="margin-top:18px">
+              <table>
+                <thead>
+                  <tr><th>Group</th><th>What question does it answer?</th><th>Examples</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Creational</td><td>How should objects be created cleanly?</td><td>Factory Method, Builder, Singleton</td></tr>
+                  <tr><td>Structural</td><td>How should objects be composed cleanly?</td><td>Adapter, Facade, Decorator, Proxy, Repository</td></tr>
+                  <tr><td>Behavioral</td><td>How should behavior be coordinated clearly?</td><td>Strategy, Observer, Command, State, Template Method, Chain of Responsibility</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note" style="margin-top:18px">
+              <strong>Fast rule</strong>
+              Do not ask whether a pattern is “good.” Ask what design problem you actually have, and
+              then see whether a pattern makes the system simpler.
+            </div>
+          </section>
+
+          <section class="section-block" id="creational">
+            <h2>Creational patterns</h2>
+            <div class="grid-3">
+              <div class="card"><span class="tag blue">Factory Method</span><h3>Centralize object creation</h3><p>Use it when implementation choice depends on config, environment, or input.</p></div>
+              <div class="card"><span class="tag blue">Builder</span><h3>Create complex objects step by step</h3><p>Helpful when objects have many optional fields or a multi-step construction flow.</p></div>
+              <div class="card"><span class="tag blue">Singleton</span><h3>One shared instance</h3><p>Useful for root configuration or logging, but easy to abuse into global state.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="structural">
+            <h2>Structural patterns</h2>
+            <div class="grid-3">
+              <div class="card"><span class="tag pink">Adapter</span><h3>Integrate vendors safely</h3><p>Normalize external interfaces so internal domain logic stays clean.</p></div>
+              <div class="card"><span class="tag pink">Facade</span><h3>Hide multi-step flows</h3><p>Turn a large use case into one clear entry point.</p></div>
+              <div class="card"><span class="tag pink">Decorator</span><h3>Add logging, cache, or retry</h3><p>Wrap behavior without modifying the original class.</p></div>
+              <div class="card"><span class="tag pink">Proxy</span><h3>Control access</h3><p>Useful for lazy loading, access control, or remote proxy scenarios.</p></div>
+              <div class="card"><span class="tag pink">Repository</span><h3>Protect the domain from ORM details</h3><p>Create a boundary between business logic and persistence concerns.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="behavioral">
+            <h2>Behavioral patterns</h2>
+            <div class="grid-3">
+              <div class="card"><span class="tag green">Strategy</span><h3>Multiple behavior variants</h3><p>Turn long if/else branches into separate interchangeable strategies.</p></div>
+              <div class="card"><span class="tag green">Observer</span><h3>One event, many reactions</h3><p>A publisher emits an event and subscribers handle their own responsibilities.</p></div>
+              <div class="card"><span class="tag green">Command</span><h3>Package actions as objects</h3><p>Very useful for queues, retries, undo/redo, and deferred execution.</p></div>
+              <div class="card"><span class="tag green">State</span><h3>Behavior by lifecycle state</h3><p>Great for order, booking, or payment state transitions.</p></div>
+              <div class="card"><span class="tag green">Template Method</span><h3>Fixed algorithm skeleton</h3><p>Useful for import pipelines or workflows with the same structural steps.</p></div>
+              <div class="card"><span class="tag green">Chain of Responsibility</span><h3>Sequential processing stages</h3><p>Fits middleware, validation chains, and approval flows.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="systems">
+            <h2>Patterns by system type</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>System type</th><th>Useful patterns</th><th>Why</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>E-commerce</td><td>Strategy, Factory, Facade, Adapter, State</td><td>Many payment types, multi-step checkout flows, and order state transitions.</td></tr>
+                  <tr><td>Notification</td><td>Strategy, Adapter, Command, Decorator</td><td>Many channels, many providers, plus retry and queue behavior.</td></tr>
+                  <tr><td>Booking</td><td>State, Facade, Command, Repository</td><td>Reservation lifecycle and timeout-driven workflows.</td></tr>
+                  <tr><td>API Gateway</td><td>Chain, Decorator, Proxy</td><td>Requests flow through auth, validation, rate limiting, and logging.</td></tr>
+                  <tr><td>Workflow / Jobs</td><td>Command, Observer, State</td><td>Background work, retries, lifecycle states, and completion events.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section-block" id="selection">
+            <h2>Quick selection guide</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>If you notice...</h3>
+                <ul>
+                  <li>Many if/else branches by behavior variant -> Strategy</li>
+                  <li>Object creation logic scattered everywhere -> Factory Method</li>
+                  <li>An object with too many constructor parameters -> Builder</li>
+                  <li>Vendor APIs polluting your domain -> Adapter</li>
+                  <li>A use case that calls 5-7 internal services -> Facade</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Or if you notice...</h3>
+                <ul>
+                  <li>You want cache, logging, or retry -> Decorator</li>
+                  <li>An object changes behavior by lifecycle stage -> State</li>
+                  <li>A request passes through many stages -> Chain of Responsibility</li>
+                  <li>An action needs queueing or undo -> Command</li>
+                  <li>Business logic is glued to ORM or SQL -> Repository</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">Source content: <code>references/design-patterns.md</code></div>
+    </div>
+    <script src="./assets/site.js"></script>
+  </body>
+  </html>

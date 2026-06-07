@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Design Exercises</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>Exercises that turn knowledge into design reflexes</span>
+        </div>
+        <nav class="nav"></nav>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Practice</div>
+            <h1>System Design Exercises</h1>
+            <p>
+              Each exercise helps you train a full loop: clarify requirements, identify NFRs,
+              estimate scale, map the data flow, point out bottlenecks, and explain trade-offs.
+            </p>
+            <div class="hero-stats">
+              <span class="pill">Requirement</span>
+              <span class="pill">NFR</span>
+              <span class="pill">Trade-off</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./assets/system-design-illustration.svg" alt="System design illustration" />
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <h2>Contents</h2>
+          <nav class="toc">
+            <a href="#method">Practice method</a>
+            <a href="#cases">Cases</a>
+            <a href="#review">Review checklist</a>
+            <a href="#portfolio">Turning exercises into portfolio work</a>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="section-block" id="method">
+            <h2>Practice method</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Step</th><th>What to do</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Clarify functional requirements</td></tr>
+                  <tr><td>2</td><td>Clarify non-functional requirements</td></tr>
+                  <tr><td>3</td><td>Estimate scale</td></tr>
+                  <tr><td>4</td><td>Identify major components and data flow</td></tr>
+                  <tr><td>5</td><td>Call out bottlenecks, failure modes, and trade-offs</td></tr>
+                  <tr><td>6</td><td>Rewrite the solution as if you were presenting it to a team</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note" style="margin-top:18px">
+              <strong>Practice tip</strong>
+              Do not jump into microservices too early. Ask where the data goes, who owns it, and
+              where the system fails before asking which services exist.
+            </div>
+          </section>
+
+          <section class="section-block" id="cases">
+            <h2>Cases</h2>
+            <div class="grid-2">
+              <div class="card"><span class="tag blue">Case 1</span><h3>URL Shortener</h3><p>Study read/write patterns, key generation, caching, database indexing, and analytics paths.</p></div>
+              <div class="card"><span class="tag green">Case 2</span><h3>E-commerce Order Flow</h3><p>Study service boundaries, inventory consistency, payment integration, and asynchronous notifications.</p></div>
+              <div class="card"><span class="tag gold">Case 3</span><h3>Booking System</h3><p>Study concurrent booking, temporary reservation, expiration, and availability views.</p></div>
+              <div class="card"><span class="tag pink">Case 4</span><h3>Notification Platform</h3><p>Study multi-channel delivery, provider failover, retry strategies, and template management.</p></div>
+              <div class="card"><span class="tag cyan">Case 5</span><h3>Audit Log System</h3><p>Study immutable events, searchability, storage growth, security, and compliance.</p></div>
+            </div>
+          </section>
+
+          <section class="section-block" id="review">
+            <h2>Review checklist</h2>
+            <div class="grid-2">
+              <div class="card">
+                <ul>
+                  <li>Are boundaries clear?</li>
+                  <li>Are dependencies reasonable?</li>
+                  <li>Is data consistency addressed?</li>
+                  <li>Are failure modes discussed?</li>
+                  <li>Are monitoring, logging, and metrics present?</li>
+                  <li>Are trade-offs explained?</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Score yourself</h3>
+                <ul>
+                  <li>Requirement clarity: 1-5</li>
+                  <li>NFR clarity: 1-5</li>
+                  <li>Boundary quality: 1-5</li>
+                  <li>Data flow clarity: 1-5</li>
+                  <li>Trade-off quality: 1-5</li>
+                  <li>Failure mode coverage: 1-5</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="portfolio">
+            <h2>Turning exercises into portfolio work</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Each case should include</h3>
+                <ul>
+                  <li>Problem statement</li>
+                  <li>Assumptions</li>
+                  <li>Context diagram</li>
+                  <li>Container/component diagram</li>
+                  <li>Sequence diagram</li>
+                  <li>Database choice</li>
+                  <li>Scaling strategy</li>
+                  <li>A short ADR</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>Suggestion</strong>
+                A strong portfolio does not need many cases. Two or three deep analyses with clean
+                diagrams and explicit trade-offs are already powerful.
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">Source content: <code>references/system-design-exercises.md</code></div>
+    </div>
+    <script src="./assets/site.js"></script>
+  </body>
+  </html>

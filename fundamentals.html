@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamentals of Software Architecture</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Software Architect Study Guide</strong>
+          <span>Book track xây nền software architecture theo hướng engineering</span>
+        </div>
+        <nav class="nav"></nav>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Book Course</div>
+            <h1>Fundamentals of Software Architecture</h1>
+            <p>
+              Track học theo sách để xây phần nền vững cho software architecture: architectural
+              thinking, modularity, characteristics, architecture styles, risk, diagramming và các
+              kỹ năng mềm mà một architect thực sự cần.
+            </p>
+            <div class="hero-stats">
+              <span class="pill">Modularity</span>
+              <span class="pill">Architecture Styles</span>
+              <span class="pill">Risk</span>
+              <span class="pill">Leadership</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./assets/architecture-illustration.svg" alt="Software architecture foundations illustration" />
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <h2>Mục lục</h2>
+          <nav class="toc">
+            <a href="#why">Vì sao nên học track này</a>
+            <a href="#chapter-map">Bản đồ chương sách</a>
+            <a href="#modules">7 module học</a>
+            <a href="#schedule">Lịch học 6 tuần</a>
+            <a href="#integration">Ghép vào course</a>
+            <a href="#signals">Dấu hiệu đã ngấm</a>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="section-block" id="why">
+            <h2>Vì sao nên học track này</h2>
+            <p>
+              Nếu `Hard Parts` luyện các bài toán khó khi hệ thống đã phân tán, thì `Fundamentals`
+              là phần giúp bạn có ngôn ngữ, mô hình và khung đánh giá để nói chuyện về software
+              architecture một cách bài bản ngay từ đầu.
+            </p>
+            <div class="grid-3">
+              <div class="card">
+                <span class="tag blue">Foundation</span>
+                <h3>Xây tư duy kiến trúc</h3>
+                <p>Giúp bạn hiểu architect thực sự làm gì, và vì sao architecture là một chuỗi quyết định liên tục.</p>
+              </div>
+              <div class="card">
+                <span class="tag gold">Styles</span>
+                <h3>Nhìn rõ architecture styles</h3>
+                <p>Không chỉ biết tên style, mà còn biết khi nào layered, microkernel hay microservices thật sự hợp bài toán.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">Practice</span>
+                <h3>Học cả kỹ thuật lẫn soft skills</h3>
+                <p>Risk, ADR, diagramming, negotiation và team effectiveness đều được gắn vào vai trò architect.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="chapter-map">
+            <h2>Bản đồ chương sách</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Cụm chương</th>
+                    <th>Trọng tâm</th>
+                    <th>Câu hỏi nên tự trả lời</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Chương 1-8</td>
+                    <td>Foundations</td>
+                    <td>Một kiến trúc tốt được định nghĩa, đo và govern như thế nào?</td>
+                  </tr>
+                  <tr>
+                    <td>Chương 9-18</td>
+                    <td>Architecture Styles</td>
+                    <td>Style nào hợp nhất với requirement, team capability và NFR hiện tại?</td>
+                  </tr>
+                  <tr>
+                    <td>Chương 19-24</td>
+                    <td>Techniques and Soft Skills</td>
+                    <td>Architect ra quyết định, đánh giá risk, trình bày và dẫn dắt team ra sao?</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note" style="margin-top:18px">
+              <strong>Điểm mạnh của sách</strong>
+              Cuốn này rất mạnh ở việc giúp bạn chuyển từ học định nghĩa sang học đánh giá kiến trúc
+              như một bài toán engineering có thể phân tích, đo lường và giải thích.
+            </div>
+          </section>
+
+          <section class="section-block" id="modules">
+            <h2>7 module học</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="tag blue">Module 1</span>
+                <h3>Architectural Thinking</h3>
+                <p>Hiểu software architecture, vai trò architect và tư duy trade-off ở mức nền tảng.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag green">Module 2</span>
+                <h3>Modularity và Architecture Characteristics</h3>
+                <p>Học cohesion, coupling, connascence và cách trích characteristics từ domain requirement.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag gold">Module 3</span>
+                <h3>Measuring, Governance, và Quanta</h3>
+                <p>Dùng fitness functions, governance vừa đủ và architectural quanta để nhìn granularity rõ hơn.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag pink">Module 4</span>
+                <h3>Component Thinking</h3>
+                <p>Xác định component, gắn requirement vào component và đánh giá granularity ở mức tổ chức hệ thống.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag cyan">Module 5</span>
+                <h3>Architecture Styles Survey</h3>
+                <p>So sánh layered, pipeline, microkernel, service-based, event-driven, SOA, microservices và space-based.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag blue">Module 6</span>
+                <h3>Decisions, Risk, và Diagramming</h3>
+                <p>Viết ADR, đánh giá risk, và dùng diagram như công cụ giao tiếp thật sự.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="tag green">Module 7</span>
+                <h3>Team và Leadership</h3>
+                <p>Cải thiện communication, facilitation, negotiation và vai trò lãnh đạo kỹ thuật của architect.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="schedule">
+            <h2>Lịch học 6 tuần</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Tiến độ đề xuất</h3>
+                <ul>
+                  <li>Tuần 1: chương 1-3, tóm tắt architect role, modularity, coupling</li>
+                  <li>Tuần 2: chương 4-6, xác định characteristics và fitness functions</li>
+                  <li>Tuần 3: chương 7-8, vẽ quanta và component map</li>
+                  <li>Tuần 4: chương 9-14, so sánh layered, microkernel, service-based, event-driven</li>
+                  <li>Tuần 5: chương 15-18, so sánh microservices, SOA, space-based và style selection</li>
+                  <li>Tuần 6: chương 19-24, viết ADR, risk review, diagram và leadership reflection</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>Cách học hiệu quả nhất</strong>
+                Với cuốn này, công thức tốt nhất là: đọc chương -> rút ra mô hình đánh giá -> áp vào
+                một case thật -> viết lại decision hoặc comparison table.
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="integration">
+            <h2>Ghép vào course hiện tại</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Trình tự nên học</h3>
+                <ul>
+                  <li>Đi qua `Roadmap` để có bức tranh tổng thể</li>
+                  <li>Học `Fundamentals` để xây nền software architecture</li>
+                  <li>Dùng `Architecture Foundations` để nối với boundary, dependency và NFR</li>
+                  <li>Dùng `System Design Exercises` để luyện style selection, diagramming và risk analysis</li>
+                  <li>Học tiếp `Hard Parts` để đào sâu distributed trade-off</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Điểm khác với Hard Parts</h3>
+                <ul>
+                  <li>`Fundamentals`: nền tảng, style survey, architect role, governance</li>
+                  <li>`Hard Parts`: data ownership, workflows, saga, distributed complexity</li>
+                  <li>Hai track bổ trợ nhau rất tốt nếu học theo thứ tự nền tảng trước, chiều sâu sau</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="signals">
+            <h2>Dấu hiệu bạn đã ngấm track này</h2>
+            <div class="grid-2">
+              <div class="card">
+                <ul>
+                  <li>Bạn mô tả kiến trúc bằng characteristics chứ không chỉ bằng sơ đồ component.</li>
+                  <li>Bạn phân biệt được architecture style, design pattern, component, và deployment concern.</li>
+                  <li>Bạn chọn style phù hợp dựa trên NFR, team capability và trade-off.</li>
+                  <li>Bạn viết ADR, vẽ diagram và nói về risk rõ ràng hơn trước.</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Giá trị lớn nhất</h3>
+                <ul>
+                  <li>Cho bạn một ngôn ngữ chung để trao đổi về architecture.</li>
+                  <li>Giúp bạn tránh chọn style theo trend.</li>
+                  <li>Đặt nền để học sâu hơn các chủ đề distributed architecture về sau.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">Nguồn nội dung gốc: <code>references/fundamentals.md</code></div>
+    </div>
+    <script src="./assets/site.js"></script>
+  </body>
+  </html>

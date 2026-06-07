@@ -13,13 +13,7 @@
           <strong>Software Architect Study Guide</strong>
           <span>Lộ trình học có cấu trúc, thực chiến và dễ mở rộng</span>
         </div>
-        <nav class="nav">
-          <a href="./index.html">Trang chủ</a>
-          <a href="./roadmap.html" class="active">Roadmap</a>
-          <a href="./design-patterns.html">Patterns</a>
-          <a href="./architecture-foundations.html">Architecture</a>
-          <a href="./system-design-exercises.html">Exercises</a>
-        </nav>
+        <nav class="nav"></nav>
       </div>
 
       <section class="hero">
@@ -50,6 +44,8 @@
             <a href="#overview">Toàn cảnh</a>
             <a href="#pillars">5 nhóm năng lực</a>
             <a href="#timeline">Lộ trình 6 tháng</a>
+            <a href="#book-track">Book track</a>
+            <a href="#fundamentals-track">Fundamentals track</a>
             <a href="#weekly">Lịch học hằng tuần</a>
             <a href="#projects">Portfolio projects</a>
             <a href="#milestones">Milestone tự đánh giá</a>
@@ -140,22 +136,64 @@
               <div class="timeline-item">
                 <span class="tag gold">Tháng 3</span>
                 <h3>Application Architecture</h3>
-                <p>Layered architecture, clean architecture, hexagonal architecture, modular monolith và CQRS basics.</p>
+                <p>Layered architecture, clean architecture, hexagonal architecture, modular monolith và bắt đầu track Hard Parts với coupling, modularity, decomposition.</p>
               </div>
               <div class="timeline-item">
                 <span class="tag pink">Tháng 4</span>
                 <h3>Data và Distributed Systems</h3>
-                <p>Transaction, locking, cache aside, message queue, eventual consistency, idempotency, timeout, retry, circuit breaker.</p>
+                <p>Transaction, locking, cache aside, message queue, eventual consistency, idempotency, timeout, retry, circuit breaker và data decomposition/service granularity.</p>
               </div>
               <div class="timeline-item">
                 <span class="tag cyan">Tháng 5</span>
                 <h3>Architecture Styles và Tradeoff</h3>
-                <p>Monolith, modular monolith, microservices, event-driven architecture, serverless, DDD strategic design.</p>
+                <p>Monolith, modular monolith, microservices, event-driven architecture, serverless, DDD strategic design cùng data ownership, distributed access, workflow, saga.</p>
               </div>
               <div class="timeline-item">
                 <span class="tag blue">Tháng 6</span>
                 <h3>System Design và Architect Mindset</h3>
-                <p>Non-functional requirements, capacity estimation, service boundaries, observability, security basics, architecture review.</p>
+                <p>Non-functional requirements, capacity estimation, service boundaries, observability, security basics, architecture review, contracts, data mesh và trade-off analysis.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="book-track">
+            <h2>Book Track: Software Architecture: The Hard Parts</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Cách ghép vào roadmap</h3>
+                <ul>
+                  <li>Tháng 3: coupling, modularity, decomposition</li>
+                  <li>Tháng 4: data decomposition, service granularity</li>
+                  <li>Tháng 5: reuse, data ownership, distributed access, workflow, saga</li>
+                  <li>Tháng 6: contracts, analytical data, data mesh, trade-off analysis</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>Vì sao nên thêm track này</strong>
+                Đây là phần giúp roadmap chuyển từ "biết khái niệm" sang "ra quyết định được". Nếu
+                architecture foundations là phần khung xương, thì cuốn sách này là nơi luyện những
+                bài toán khó nhất của distributed architecture.
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="fundamentals-track">
+            <h2>Book Track: Fundamentals of Software Architecture</h2>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Cách ghép vào roadmap</h3>
+                <ul>
+                  <li>Tháng 1-2: architect role, modularity, characteristics</li>
+                  <li>Tháng 3: governance, quanta, component thinking</li>
+                  <li>Tháng 4-5: architecture styles survey và style selection</li>
+                  <li>Tháng 6: decisions, risk, diagramming, leadership</li>
+                </ul>
+              </div>
+              <div class="note">
+                <strong>Vai trò của track này</strong>
+                Nếu `Hard Parts` là phần chiều sâu của distributed architecture, thì `Fundamentals`
+                là phần nền để bạn hiểu software architecture như một discipline có thể phân tích,
+                đánh giá và giải thích mạch lạc.
               </div>
             </div>
           </section>
@@ -214,5 +252,6 @@
 
       <div class="footer">Nguồn nội dung gốc: <code>references/roadmap.md</code></div>
     </div>
+    <script src="./assets/site.js"></script>
   </body>
   </html>
