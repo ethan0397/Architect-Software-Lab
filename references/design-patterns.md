@@ -14,7 +14,7 @@
 
 ## 1. Design Pattern là gì
 
-Design pattern là một giải pháp thiết kế có tính lặp lại cho một nhóm vấn đề phổ biến trong code. Pattern không phải template cứng nhắc. Nó là cách tổ chức code để:
+Design pattern là một **giải pháp chung, đã được tối ưu hóa** để giải quyết các vấn đề phổ biến khi thiết kế phần mềm trong lập trình hướng đối tượng (OOP). Pattern là giải pháp thiết kế có tính lặp lại cho một nhóm vấn đề thường gặp — không phải template cứng nhắc, mà là cách tổ chức code để:
 
 - giảm coupling
 - tăng khả năng mở rộng
@@ -22,7 +22,22 @@ Design pattern là một giải pháp thiết kế có tính lặp lại cho m�
 - dễ thay đổi hơn
 - giao tiếp ý tưởng dễ dàng hơn trong team
 
+Một số điểm quan trọng:
+
+- Design pattern là **kỹ thuật thiết kế trong OOP**, không gắn với một ngôn ngữ cụ thể. Có thể áp dụng ở Java, C#, TypeScript, Python và hầu hết ngôn ngữ hỗ trợ OOP.
+- Bạn có thể tự nghĩ ra cách giải quyết, nhưng pattern giúp bạn chọn hướng **đã được cộng đồng kiểm chứng**, thường tối ưu hơn giải pháp tự phát.
+- Nếu bạn mới học lập trình và chưa vững OOP (class, interface, inheritance, polymorphism, composition), nên học nền tảng trước rồi mới vào design pattern.
+
 Điểm quan trọng: pattern không phải mục tiêu. Mục tiêu là giải quyết vấn đề thiết kế. Pattern chỉ là công cụ.
+
+> Tham khảo: [Design Patterns là gì? — Viblo](https://viblo.asia/p/design-patterns-la-gi-tai-sao-no-lai-la-tro-thu-dac-luc-cua-developers-tong-hop-23-mau-design-pattern-GrLZDBQV5k0)
+
+### Design pattern hỗ trợ developers như thế nào
+
+1. **Tăng tốc độ phát triển** — Có sẵn công cụ cho vấn đề thiết kế thông dụng; kể cả khi chưa gặp đúng bài toán, hiểu pattern giúp bạn nhìn code qua lăng kính OOP rõ hơn.
+2. **Code tường minh, dễ teamwork** — Pattern tạo **ngôn ngữ chung**: nói "Facade" hay "Observer" là cả team hình dung được cấu trúc, giảm thời gian giải thích.
+3. **Tái sử dụng code** — Dùng lại giải pháp đã kiểm chứng thay vì mỗi lần tự đi tìm từ đầu.
+4. **Hạn chế lỗi tiềm ẩn, dễ nâng cấp** — Tránh các quyết định thiết kế dễ vỡ về sau; codebase dễ bảo trì và mở rộng hơn.
 
 ## 2. Cách học pattern đúng
 
@@ -45,31 +60,71 @@ Mỗi pattern nên học theo khung sau:
 
 ## 3. Có những loại design pattern nào
 
-Thông thường pattern được chia thành 3 nhóm lớn:
+Hệ thống pattern phổ biến nhất là **23 mẫu Gang of Four (GoF)** trong cuốn *Design Patterns: Elements of Reusable Object-Oriented Software*. Chúng được chia thành 3 nhóm theo mục đích:
 
-1. **Creational patterns**: lo cách tạo object
-2. **Structural patterns**: lo cách ghép các object hoặc module với nhau
-3. **Behavioral patterns**: lo cách các object phối hợp hành vi
+1. **Creational patterns** — lo cách tạo object, che giấu logic khởi tạo thay vì gọi `new` trực tiếp khắp nơi
+2. **Structural patterns** — lo cách ghép class/object; hệ thống càng lớn nhóm này càng quan trọng (theo dõi qua class diagram)
+3. **Behavioral patterns** — lo cách object phối hợp hành vi (theo dõi qua collaboration/sequence diagram)
+
+### Bảng 23 mẫu GoF
+
+| Nhóm | Pattern | Ý nghĩa ngắn |
+|---|---|---|
+| Creational | Singleton | Một instance duy nhất cho toàn ứng dụng |
+| Creational | Factory Method | Subclass quyết định loại object được tạo |
+| Creational | Abstract Factory | Tạo họ (family) object liên quan mà không chỉ rõ class cụ thể |
+| Creational | Builder | Dựng object phức tạp từng bước |
+| Creational | Prototype | Sao chép object có sẵn thay vì tạo mới từ đầu |
+| Structural | Adapter | Chuyển interface này sang interface client mong đợi |
+| Structural | Bridge | Tách abstraction khỏi implementation để thay đổi độc lập |
+| Structural | Composite | Cây part-whole: client xử lý object đơn và nhóm giống nhau |
+| Structural | Decorator | Thêm trách nhiệm động cho object mà không sửa class gốc |
+| Structural | Facade | Giao diện đơn giản cho hệ con phức tạp |
+| Structural | Flyweight | Chia sẻ state chung để tiết kiệm bộ nhớ khi có nhiều object tương tự |
+| Structural | Proxy | Surrogate kiểm soát truy cập tới object thật |
+| Behavioral | Interpreter | Biểu diễn grammar và interpreter cho ngôn ngữ nhỏ |
+| Behavioral | Template Method | Skeleton thuật toán cố định, bước con do subclass override |
+| Behavioral | Chain of Responsibility | Chuỗi handler; mỗi handler quyết định xử lý hoặc chuyển tiếp |
+| Behavioral | Command | Đóng gói request thành object (undo, queue, log) |
+| Behavioral | Iterator | Duyệt collection mà không lộ cấu trúc bên trong |
+| Behavioral | Mediator | Gom giao tiếp giữa nhiều object qua một điểm trung gian |
+| Behavioral | Memento | Lưu/khôi phục trạng thái object mà không phá encapsulation |
+| Behavioral | Observer | Một subject thông báo cho nhiều observer khi đổi trạng thái |
+| Behavioral | State | Hành vi object đổi theo trạng thái nội tại |
+| Behavioral | Strategy | Đổi thuật toán/hành vi lúc runtime |
+| Behavioral | Visitor | Thêm thao tác mới lên cấu trúc object mà không sửa class đó |
+
+Trong track học này, ta ưu tiên các pattern xuất hiện nhiều nhất ở backend/application (Factory, Builder, Adapter, Facade, Strategy, Observer, Command, State, …). Các mẫu như Interpreter, Flyweight, Memento, Visitor ít gặp hơn trong CRUD/service thông thường nhưng vẫn hữu ích khi gặp đúng bài toán.
 
 ```mermaid
 flowchart TD
-  A[Design Patterns]
-  A --> B[Creational]
-  A --> C[Structural]
-  A --> D[Behavioral]
-  B --> B1[Factory Method]
-  B --> B2[Builder]
-  B --> B3[Singleton]
+  A[23 GoF Design Patterns]
+  A --> B[Creational - 5]
+  A --> C[Structural - 7]
+  A --> D[Behavioral - 11]
+  B --> B1[Singleton]
+  B --> B2[Factory Method]
+  B --> B3[Abstract Factory]
+  B --> B4[Builder]
+  B --> B5[Prototype]
   C --> C1[Adapter]
-  C --> C2[Facade]
-  C --> C3[Decorator]
-  C --> C4[Proxy]
-  D --> D1[Strategy]
-  D --> D2[Observer]
-  D --> D3[Command]
-  D --> D4[State]
-  D --> D5[Template Method]
-  D --> D6[Chain of Responsibility]
+  C --> C2[Bridge]
+  C --> C3[Composite]
+  C --> C4[Decorator]
+  C --> C5[Facade]
+  C --> C6[Flyweight]
+  C --> C7[Proxy]
+  D --> D1[Interpreter]
+  D --> D2[Template Method]
+  D --> D3[Chain of Responsibility]
+  D --> D4[Command]
+  D --> D5[Iterator]
+  D --> D6[Mediator]
+  D --> D7[Memento]
+  D --> D8[Observer]
+  D --> D9[State]
+  D --> D10[Strategy]
+  D --> D11[Visitor]
 ```
 
 ---

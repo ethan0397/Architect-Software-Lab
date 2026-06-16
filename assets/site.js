@@ -78,7 +78,26 @@
   }
 
   function currentPage() {
-    return pagesByFile[currentFileName()] || pagesById.home;
+    var file = currentFileName();
+    if (file === "pattern.html" || file === "pattern.en.html") {
+      return pagesById["design-patterns"];
+    }
+    return pagesByFile[file] || pagesById.home;
+  }
+
+  function appendQueryIfNeeded(href) {
+    var search = window.location.search;
+    if (!search) {
+      return href;
+    }
+    var file = currentFileName();
+    if (file !== "pattern.html" && file !== "pattern.en.html") {
+      return href;
+    }
+    if (href.indexOf("pattern") === -1) {
+      return href;
+    }
+    return href.split("?")[0] + search;
   }
 
   function fileForLanguage(page, language) {
@@ -86,12 +105,17 @@
       return currentFileName();
     }
 
+    var file = currentFileName();
+    if (file === "pattern.html" || file === "pattern.en.html") {
+      return language === "en" ? "pattern.en.html" : "pattern.html";
+    }
+
     return page.files[language] || page.files.vi || currentFileName();
   }
 
   function createNavLink(page, language, active) {
     var link = document.createElement("a");
-    link.href = "./" + fileForLanguage(page, language);
+    link.href = appendQueryIfNeeded("./" + fileForLanguage(page, language));
     link.textContent = page.navLabel[language] || page.navLabel.vi;
 
     if (active) {
@@ -177,12 +201,12 @@
 
     var viLink = document.createElement("a");
     viLink.className = "toggle-button" + (english ? "" : " active");
-    viLink.href = "./" + fileForLanguage(page, "vi");
+    viLink.href = appendQueryIfNeeded("./" + fileForLanguage(page, "vi"));
     viLink.textContent = "VI";
 
     var enLink = document.createElement("a");
     enLink.className = "toggle-button" + (english ? " active" : "");
-    enLink.href = "./" + fileForLanguage(page, "en");
+    enLink.href = appendQueryIfNeeded("./" + fileForLanguage(page, "en"));
     enLink.textContent = "EN";
 
     langGroup.appendChild(viLink);

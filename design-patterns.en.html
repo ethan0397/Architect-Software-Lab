@@ -41,6 +41,9 @@
         <aside class="sidebar panel">
           <h2>Contents</h2>
           <nav class="toc">
+            <a href="#intro">What is a design pattern?</a>
+            <a href="#benefits">Why learn them</a>
+            <a href="#gof">23 GoF patterns</a>
             <a href="#map">Pattern map</a>
             <a href="#creational">Creational</a>
             <a href="#structural">Structural</a>
@@ -51,6 +54,162 @@
         </aside>
 
         <main class="content">
+          <section class="section-block" id="intro">
+            <h2>What is a design pattern?</h2>
+            <p>
+              A design pattern is a general, optimized solution to a recurring software design problem
+              in object-oriented programming (OOP). It is not a rigid template — it is a way to organize
+              code so coupling drops, tests get easier, change becomes safer, and teams communicate faster.
+            </p>
+            <div class="grid-2" style="margin-top:18px">
+              <div class="card">
+                <span class="tag blue">OOP</span>
+                <h3>A technique, not a language</h3>
+                <p>
+                  Patterns work in Java, C#, TypeScript, Python, and more — as long as you understand
+                  classes, interfaces, inheritance, and polymorphism.
+                </p>
+              </div>
+              <div class="card">
+                <span class="tag gold">Prerequisite</span>
+                <h3>Learn OOP first</h3>
+                <p>
+                  If you are still new to programming and OOP feels shaky, build that foundation first.
+                  Patterns pay off once object thinking is natural.
+                </p>
+              </div>
+            </div>
+            <div class="note" style="margin-top:18px">
+              <strong>Key point</strong>
+              Patterns are not the goal. The goal is solving a design problem — patterns are just tools.
+              Further reading:
+              <a href="https://viblo.asia/p/design-patterns-la-gi-tai-sao-no-lai-la-tro-thu-dac-luc-cua-developers-tong-hop-23-mau-design-pattern-GrLZDBQV5k0" target="_blank" rel="noopener">Design Patterns overview — Viblo</a>
+            </div>
+          </section>
+
+          <section class="section-block" id="benefits">
+            <h2>Why learn design patterns</h2>
+            <div class="grid-2">
+              <div class="card">
+                <span class="tag cyan">1</span>
+                <h3>Faster development</h3>
+                <p>Reach for proven tools for common design problems instead of reinventing each time.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">2</span>
+                <h3>Shared team vocabulary</h3>
+                <p>Saying "Facade" or "Observer" lets everyone picture the structure without long explanations.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">3</span>
+                <h3>Reusable solutions</h3>
+                <p>Apply community-tested approaches to problems that show up again and again.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">4</span>
+                <h3>Easier maintenance</h3>
+                <p>Avoid design choices that break later; codebases become easier to extend and upgrade.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="gof">
+            <h2>23 Gang of Four (GoF) patterns</h2>
+            <p>
+              The classic set from <em>Design Patterns: Elements of Reusable Object-Oriented Software</em>
+              splits into three groups by purpose. Click any pattern for a detailed article.
+            </p>
+
+            <div class="gof-group">
+              <h3>1. Creational patterns</h3>
+              <p>The Creational group has 5 patterns:</p>
+              <ul class="pattern-link-list">
+                <li><a href="./pattern.en.html?id=singleton">Singleton</a></li>
+                <li><a href="./pattern.en.html?id=factory-method">Factory Method</a></li>
+                <li><a href="./pattern.en.html?id=abstract-factory">Abstract Factory</a></li>
+                <li><a href="./pattern.en.html?id=builder">Builder</a></li>
+                <li><a href="./pattern.en.html?id=prototype">Prototype</a></li>
+              </ul>
+              <p>
+                These patterns hide object creation logic instead of scattering <code>new</code> everywhere,
+                so the program stays flexible about which object to create in each situation.
+              </p>
+            </div>
+
+            <div class="gof-group">
+              <h3>2. Structural patterns</h3>
+              <p>The Structural group has 7 patterns:</p>
+              <ul class="pattern-link-list">
+                <li><a href="./pattern.en.html?id=adapter">Adapter</a></li>
+                <li><a href="./pattern.en.html?id=bridge">Bridge</a></li>
+                <li><a href="./pattern.en.html?id=composite">Composite</a></li>
+                <li><a href="./pattern.en.html?id=decorator">Decorator</a></li>
+                <li><a href="./pattern.en.html?id=facade">Facade</a></li>
+                <li><a href="./pattern.en.html?id=flyweight">Flyweight</a></li>
+                <li><a href="./pattern.en.html?id=proxy">Proxy</a></li>
+              </ul>
+              <p>
+                These patterns define relationships between classes and objects. They matter more as systems
+                grow — class diagrams are a good way to track them.
+              </p>
+            </div>
+
+            <div class="gof-group">
+              <h3>3. Behavioral patterns</h3>
+              <p>The Behavioral group has 11 patterns:</p>
+              <ul class="pattern-link-list">
+                <li><a href="./pattern.en.html?id=interpreter">Interpreter</a></li>
+                <li><a href="./pattern.en.html?id=template-method">Template Method</a></li>
+                <li><a href="./pattern.en.html?id=chain-of-responsibility">Chain of Responsibility</a></li>
+                <li><a href="./pattern.en.html?id=command">Command</a></li>
+                <li><a href="./pattern.en.html?id=iterator">Iterator</a></li>
+                <li><a href="./pattern.en.html?id=mediator">Mediator</a></li>
+                <li><a href="./pattern.en.html?id=memento">Memento</a></li>
+                <li><a href="./pattern.en.html?id=observer">Observer</a></li>
+                <li><a href="./pattern.en.html?id=state">State</a></li>
+                <li><a href="./pattern.en.html?id=strategy">Strategy</a></li>
+                <li><a href="./pattern.en.html?id=visitor">Visitor</a></li>
+              </ul>
+              <p>
+                These patterns coordinate behavior between objects — collaboration and sequence diagrams
+                help you follow them.
+              </p>
+            </div>
+
+            <div class="table-wrap" style="margin-top:18px">
+              <table>
+                <thead>
+                  <tr><th>Group</th><th>Pattern</th><th>What question does it answer?</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td rowspan="5">Creational</td><td><a href="./pattern.en.html?id=singleton">Singleton</a></td><td>One shared instance</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=factory-method">Factory Method</a></td><td>Subclasses choose which object to create</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=abstract-factory">Abstract Factory</a></td><td>Create families of related objects</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=builder">Builder</a></td><td>Build complex objects step by step</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=prototype">Prototype</a></td><td>Clone an existing object</td></tr>
+                  <tr><td rowspan="7">Structural</td><td><a href="./pattern.en.html?id=adapter">Adapter</a></td><td>Convert one interface into another clients expect</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=bridge">Bridge</a></td><td>Separate abstraction from implementation</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=composite">Composite</a></td><td>Tree structures; treat leaf and group nodes the same</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=decorator">Decorator</a></td><td>Add responsibilities without changing the original class</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=facade">Facade</a></td><td>Simple interface over a complex subsystem</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=flyweight">Flyweight</a></td><td>Share state to save memory</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=proxy">Proxy</a></td><td>Control access to another object</td></tr>
+                  <tr><td rowspan="11">Behavioral</td><td><a href="./pattern.en.html?id=interpreter">Interpreter</a></td><td>Grammar and interpreter for a small language</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=template-method">Template Method</a></td><td>Fixed algorithm skeleton with overridable steps</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=chain-of-responsibility">Chain of Responsibility</a></td><td>Handlers process or pass requests along a chain</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=command">Command</a></td><td>Encapsulate a request as an object</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=iterator">Iterator</a></td><td>Traverse a collection without exposing its structure</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=mediator">Mediator</a></td><td>Centralize communication between objects</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=memento">Memento</a></td><td>Save and restore object state</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=observer">Observer</a></td><td>One subject notifies many observers</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=state">State</a></td><td>Behavior changes with internal state</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=strategy">Strategy</a></td><td>Swap algorithms at runtime</td></tr>
+                  <tr><td><a href="./pattern.en.html?id=visitor">Visitor</a></td><td>Add operations to an object structure</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
           <section class="section-block" id="map">
             <h2>Pattern map</h2>
             <div class="table-wrap" style="margin-top:18px">
@@ -75,19 +234,24 @@
           <section class="section-block" id="creational">
             <h2>Creational patterns</h2>
             <div class="grid-3">
-              <div class="card"><span class="tag blue">Factory Method</span><h3>Centralize object creation</h3><p>Use it when implementation choice depends on config, environment, or input.</p></div>
-              <div class="card"><span class="tag blue">Builder</span><h3>Create complex objects step by step</h3><p>Helpful when objects have many optional fields or a multi-step construction flow.</p></div>
-              <div class="card"><span class="tag blue">Singleton</span><h3>One shared instance</h3><p>Useful for root configuration or logging, but easy to abuse into global state.</p></div>
+              <a class="card-link" href="./pattern.en.html?id=factory-method"><div class="card"><span class="tag blue">Factory Method</span><h3>Centralize object creation</h3><p>Use it when implementation choice depends on config, environment, or input.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=abstract-factory"><div class="card"><span class="tag blue">Abstract Factory</span><h3>Create related object families</h3><p>When you need a coordinated set of UI or provider implementations.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=builder"><div class="card"><span class="tag blue">Builder</span><h3>Create complex objects step by step</h3><p>Helpful when objects have many optional fields or a multi-step construction flow.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=prototype"><div class="card"><span class="tag blue">Prototype</span><h3>Clone existing objects</h3><p>When construction is expensive; clone a template and tweak it.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=singleton"><div class="card"><span class="tag blue">Singleton</span><h3>One shared instance</h3><p>Useful for root configuration or logging, but easy to abuse into global state.</p></div></a>
             </div>
           </section>
 
           <section class="section-block" id="structural">
             <h2>Structural patterns</h2>
             <div class="grid-3">
-              <div class="card"><span class="tag pink">Adapter</span><h3>Integrate vendors safely</h3><p>Normalize external interfaces so internal domain logic stays clean.</p></div>
-              <div class="card"><span class="tag pink">Facade</span><h3>Hide multi-step flows</h3><p>Turn a large use case into one clear entry point.</p></div>
-              <div class="card"><span class="tag pink">Decorator</span><h3>Add logging, cache, or retry</h3><p>Wrap behavior without modifying the original class.</p></div>
-              <div class="card"><span class="tag pink">Proxy</span><h3>Control access</h3><p>Useful for lazy loading, access control, or remote proxy scenarios.</p></div>
+              <a class="card-link" href="./pattern.en.html?id=adapter"><div class="card"><span class="tag pink">Adapter</span><h3>Integrate vendors safely</h3><p>Normalize external interfaces so internal domain logic stays clean.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=bridge"><div class="card"><span class="tag pink">Bridge</span><h3>Separate abstraction from implementation</h3><p>Swap implementations without affecting clients.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=composite"><div class="card"><span class="tag pink">Composite</span><h3>Part-whole trees</h3><p>Menus, folder trees, org charts — treat leaves and groups uniformly.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=decorator"><div class="card"><span class="tag pink">Decorator</span><h3>Add logging, cache, or retry</h3><p>Wrap behavior without modifying the original class.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=facade"><div class="card"><span class="tag pink">Facade</span><h3>Hide multi-step flows</h3><p>Turn a large use case into one clear entry point.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=flyweight"><div class="card"><span class="tag pink">Flyweight</span><h3>Share common state</h3><p>Save memory when thousands of similar objects exist (icons, glyphs).</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=proxy"><div class="card"><span class="tag pink">Proxy</span><h3>Control access</h3><p>Useful for lazy loading, access control, or remote proxy scenarios.</p></div></a>
               <div class="card"><span class="tag pink">Repository</span><h3>Protect the domain from ORM details</h3><p>Create a boundary between business logic and persistence concerns.</p></div>
             </div>
           </section>
@@ -95,12 +259,17 @@
           <section class="section-block" id="behavioral">
             <h2>Behavioral patterns</h2>
             <div class="grid-3">
-              <div class="card"><span class="tag green">Strategy</span><h3>Multiple behavior variants</h3><p>Turn long if/else branches into separate interchangeable strategies.</p></div>
-              <div class="card"><span class="tag green">Observer</span><h3>One event, many reactions</h3><p>A publisher emits an event and subscribers handle their own responsibilities.</p></div>
-              <div class="card"><span class="tag green">Command</span><h3>Package actions as objects</h3><p>Very useful for queues, retries, undo/redo, and deferred execution.</p></div>
-              <div class="card"><span class="tag green">State</span><h3>Behavior by lifecycle state</h3><p>Great for order, booking, or payment state transitions.</p></div>
-              <div class="card"><span class="tag green">Template Method</span><h3>Fixed algorithm skeleton</h3><p>Useful for import pipelines or workflows with the same structural steps.</p></div>
-              <div class="card"><span class="tag green">Chain of Responsibility</span><h3>Sequential processing stages</h3><p>Fits middleware, validation chains, and approval flows.</p></div>
+              <a class="card-link" href="./pattern.en.html?id=strategy"><div class="card"><span class="tag green">Strategy</span><h3>Multiple behavior variants</h3><p>Turn long if/else branches into separate interchangeable strategies.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=observer"><div class="card"><span class="tag green">Observer</span><h3>One event, many reactions</h3><p>A publisher emits an event and subscribers handle their own responsibilities.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=command"><div class="card"><span class="tag green">Command</span><h3>Package actions as objects</h3><p>Very useful for queues, retries, undo/redo, and deferred execution.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=state"><div class="card"><span class="tag green">State</span><h3>Behavior by lifecycle state</h3><p>Great for order, booking, or payment state transitions.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=template-method"><div class="card"><span class="tag green">Template Method</span><h3>Fixed algorithm skeleton</h3><p>Useful for import pipelines or workflows with the same structural steps.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=chain-of-responsibility"><div class="card"><span class="tag green">Chain of Responsibility</span><h3>Sequential processing stages</h3><p>Fits middleware, validation chains, and approval flows.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=iterator"><div class="card"><span class="tag green">Iterator</span><h3>Traverse collections</h3><p>Hide internal structure while clients loop over elements.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=mediator"><div class="card"><span class="tag green">Mediator</span><h3>Centralize communication</h3><p>Chat rooms, dialog coordinators — objects stop calling each other directly.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=memento"><div class="card"><span class="tag green">Memento</span><h3>Save and restore state</h3><p>Undo in editors, snapshots before big changes.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=visitor"><div class="card"><span class="tag green">Visitor</span><h3>Operations on a structure</h3><p>Add new operations across many element classes without editing them.</p></div></a>
+              <a class="card-link" href="./pattern.en.html?id=interpreter"><div class="card"><span class="tag green">Interpreter</span><h3>Small grammars</h3><p>Parse expressions or simple rule engines.</p></div></a>
             </div>
           </section>
 

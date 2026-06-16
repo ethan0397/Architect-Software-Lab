@@ -41,6 +41,9 @@
         <aside class="sidebar panel">
           <h2>Mục lục</h2>
           <nav class="toc">
+            <a href="#intro">Design Pattern là gì</a>
+            <a href="#benefits">Vì sao nên học</a>
+            <a href="#gof">23 mẫu GoF</a>
             <a href="#map">Bản đồ pattern</a>
             <a href="#creational">Creational</a>
             <a href="#structural">Structural</a>
@@ -51,6 +54,164 @@
         </aside>
 
         <main class="content">
+          <section class="section-block" id="intro">
+            <h2>Design Pattern là gì</h2>
+            <p>
+              Design pattern là giải pháp chung, đã được tối ưu hóa, để giải quyết các vấn đề phổ biến
+              khi thiết kế phần mềm trong lập trình hướng đối tượng (OOP). Pattern không phải template
+              cứng nhắc — nó là cách tổ chức code giúp giảm coupling, dễ test, dễ mở rộng và dễ trao
+              đổi trong team.
+            </p>
+            <div class="grid-2" style="margin-top:18px">
+              <div class="card">
+                <span class="tag blue">OOP</span>
+                <h3>Kỹ thuật, không phải ngôn ngữ</h3>
+                <p>
+                  Pattern áp dụng được ở Java, C#, TypeScript, Python… Miễn là bạn hiểu class,
+                  interface, kế thừa và đa hình.
+                </p>
+              </div>
+              <div class="card">
+                <span class="tag gold">Prerequisite</span>
+                <h3>Học OOP trước</h3>
+                <p>
+                  Nếu bạn mới vào lập trình và chưa vững OOP, nên học nền tảng trước. Pattern chỉ
+                  phát huy khi bạn đã quen tư duy object.
+                </p>
+              </div>
+            </div>
+            <div class="note" style="margin-top:18px">
+              <strong>Điểm then chốt</strong>
+              Pattern không phải mục tiêu. Mục tiêu là giải quyết vấn đề thiết kế — pattern chỉ là công cụ.
+              Tham khảo thêm:
+              <a href="https://viblo.asia/p/design-patterns-la-gi-tai-sao-no-lai-la-tro-thu-dac-luc-cua-developers-tong-hop-23-mau-design-pattern-GrLZDBQV5k0" target="_blank" rel="noopener">Design Patterns là gì? — Viblo</a>
+            </div>
+          </section>
+
+          <section class="section-block" id="benefits">
+            <h2>Vì sao nên học design pattern</h2>
+            <div class="grid-2">
+              <div class="card">
+                <span class="tag cyan">1</span>
+                <h3>Tăng tốc phát triển</h3>
+                <p>Có sẵn công cụ cho vấn đề thiết kế thông dụng thay vì mỗi lần tự nghĩ từ đầu.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">2</span>
+                <h3>Ngôn ngữ chung trong team</h3>
+                <p>Nói "Facade" hay "Observer" là cả nhóm hình dung được cấu trúc, giảm thời gian giải thích.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">3</span>
+                <h3>Tái sử dụng code</h3>
+                <p>Áp dụng giải pháp đã được cộng đồng kiểm chứng cho các bài toán lặp lại.</p>
+              </div>
+              <div class="card">
+                <span class="tag cyan">4</span>
+                <h3>Dễ bảo trì, ít lỗi tiềm ẩn</h3>
+                <p>Tránh quyết định thiết kế dễ vỡ về sau; codebase dễ nâng cấp hơn.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block" id="gof">
+            <h2>23 mẫu Gang of Four (GoF)</h2>
+            <p>
+              Bộ 23 pattern trong cuốn <em>Design Patterns: Elements of Reusable Object-Oriented Software</em>
+              chia thành 3 nhóm theo mục đích sử dụng. Bấm vào từng pattern để xem bài chi tiết.
+            </p>
+
+            <div class="gof-group">
+              <h3>1. Creational Pattern (Nhóm khởi tạo)</h3>
+              <p>Nhóm Creational Pattern gồm 5 mẫu:</p>
+              <ul class="pattern-link-list">
+                <li><a href="./pattern.html?id=singleton">Singleton</a></li>
+                <li><a href="./pattern.html?id=factory-method">Factory Method</a></li>
+                <li><a href="./pattern.html?id=abstract-factory">Abstract Factory</a></li>
+                <li><a href="./pattern.html?id=builder">Builder</a></li>
+                <li><a href="./pattern.html?id=prototype">Prototype</a></li>
+              </ul>
+              <p>
+                Các pattern loại này cung cấp giải pháp tạo object và che giấu logic khởi tạo thay vì
+                dùng <code>new</code> trực tiếp khắp nơi — giúp chương trình linh hoạt hơn khi quyết
+                định object nào cần được tạo.
+              </p>
+            </div>
+
+            <div class="gof-group">
+              <h3>2. Structural Pattern (Nhóm cấu trúc)</h3>
+              <p>Nhóm Structural Pattern gồm 7 mẫu:</p>
+              <ul class="pattern-link-list">
+                <li><a href="./pattern.html?id=adapter">Adapter</a></li>
+                <li><a href="./pattern.html?id=bridge">Bridge</a></li>
+                <li><a href="./pattern.html?id=composite">Composite</a></li>
+                <li><a href="./pattern.html?id=decorator">Decorator</a></li>
+                <li><a href="./pattern.html?id=facade">Facade</a></li>
+                <li><a href="./pattern.html?id=flyweight">Flyweight</a></li>
+                <li><a href="./pattern.html?id=proxy">Proxy</a></li>
+              </ul>
+              <p>
+                Nhóm này thiết lập quan hệ giữa class và object. Hệ thống càng lớn thì structural pattern
+                càng quan trọng — có thể theo dõi qua class diagram.
+              </p>
+            </div>
+
+            <div class="gof-group">
+              <h3>3. Behavioral Pattern (Nhóm hành vi)</h3>
+              <p>Nhóm Behavioral Pattern gồm 11 mẫu:</p>
+              <ul class="pattern-link-list">
+                <li><a href="./pattern.html?id=interpreter">Interpreter</a></li>
+                <li><a href="./pattern.html?id=template-method">Template Method</a></li>
+                <li><a href="./pattern.html?id=chain-of-responsibility">Chain of Responsibility</a></li>
+                <li><a href="./pattern.html?id=command">Command</a></li>
+                <li><a href="./pattern.html?id=iterator">Iterator</a></li>
+                <li><a href="./pattern.html?id=mediator">Mediator</a></li>
+                <li><a href="./pattern.html?id=memento">Memento</a></li>
+                <li><a href="./pattern.html?id=observer">Observer</a></li>
+                <li><a href="./pattern.html?id=state">State</a></li>
+                <li><a href="./pattern.html?id=strategy">Strategy</a></li>
+                <li><a href="./pattern.html?id=visitor">Visitor</a></li>
+              </ul>
+              <p>
+                Nhóm này xử lý quan hệ hành vi giữa các object — có thể theo dõi qua collaboration và
+                sequence diagram.
+              </p>
+            </div>
+
+            <div class="table-wrap" style="margin-top:18px">
+              <table>
+                <thead>
+                  <tr><th>Nhóm</th><th>Pattern</th><th>Trả lời câu hỏi gì?</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td rowspan="5">Creational</td><td><a href="./pattern.html?id=singleton">Singleton</a></td><td>Một instance dùng chung</td></tr>
+                  <tr><td><a href="./pattern.html?id=factory-method">Factory Method</a></td><td>Subclass chọn loại object tạo ra</td></tr>
+                  <tr><td><a href="./pattern.html?id=abstract-factory">Abstract Factory</a></td><td>Tạo họ object liên quan</td></tr>
+                  <tr><td><a href="./pattern.html?id=builder">Builder</a></td><td>Dựng object phức tạp từng bước</td></tr>
+                  <tr><td><a href="./pattern.html?id=prototype">Prototype</a></td><td>Sao chép object có sẵn</td></tr>
+                  <tr><td rowspan="7">Structural</td><td><a href="./pattern.html?id=adapter">Adapter</a></td><td>Chuyển interface sang dạng client cần</td></tr>
+                  <tr><td><a href="./pattern.html?id=bridge">Bridge</a></td><td>Tách abstraction khỏi implementation</td></tr>
+                  <tr><td><a href="./pattern.html?id=composite">Composite</a></td><td>Cây part-whole, xử lý đơn và nhóm giống nhau</td></tr>
+                  <tr><td><a href="./pattern.html?id=decorator">Decorator</a></td><td>Thêm trách nhiệm mà không sửa class gốc</td></tr>
+                  <tr><td><a href="./pattern.html?id=facade">Facade</a></td><td>Giao diện đơn giản cho hệ con phức tạp</td></tr>
+                  <tr><td><a href="./pattern.html?id=flyweight">Flyweight</a></td><td>Chia sẻ state để tiết kiệm bộ nhớ</td></tr>
+                  <tr><td><a href="./pattern.html?id=proxy">Proxy</a></td><td>Surrogate kiểm soát truy cập</td></tr>
+                  <tr><td rowspan="11">Behavioral</td><td><a href="./pattern.html?id=interpreter">Interpreter</a></td><td>Grammar và interpreter cho ngôn ngữ nhỏ</td></tr>
+                  <tr><td><a href="./pattern.html?id=template-method">Template Method</a></td><td>Skeleton thuật toán, bước con do subclass override</td></tr>
+                  <tr><td><a href="./pattern.html?id=chain-of-responsibility">Chain of Responsibility</a></td><td>Chuỗi handler xử lý hoặc chuyển tiếp</td></tr>
+                  <tr><td><a href="./pattern.html?id=command">Command</a></td><td>Đóng gói request thành object</td></tr>
+                  <tr><td><a href="./pattern.html?id=iterator">Iterator</a></td><td>Duyệt collection ẩn cấu trúc bên trong</td></tr>
+                  <tr><td><a href="./pattern.html?id=mediator">Mediator</a></td><td>Gom giao tiếp qua điểm trung gian</td></tr>
+                  <tr><td><a href="./pattern.html?id=memento">Memento</a></td><td>Lưu/khôi phục trạng thái object</td></tr>
+                  <tr><td><a href="./pattern.html?id=observer">Observer</a></td><td>Subject thông báo nhiều observer</td></tr>
+                  <tr><td><a href="./pattern.html?id=state">State</a></td><td>Hành vi đổi theo trạng thái nội tại</td></tr>
+                  <tr><td><a href="./pattern.html?id=strategy">Strategy</a></td><td>Đổi thuật toán lúc runtime</td></tr>
+                  <tr><td><a href="./pattern.html?id=visitor">Visitor</a></td><td>Thêm thao tác mới lên cấu trúc object</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
           <section class="section-block" id="map">
             <h2>Bản đồ pattern</h2>
             <div class="table-wrap" style="margin-top:18px">
@@ -74,19 +235,24 @@
           <section class="section-block" id="creational">
             <h2>Creational Patterns</h2>
             <div class="grid-3">
-              <div class="card"><span class="tag blue">Factory Method</span><h3>Gom logic tạo object</h3><p>Dùng khi cần chọn implementation theo config hoặc môi trường.</p></div>
-              <div class="card"><span class="tag blue">Builder</span><h3>Tạo object nhiều bước</h3><p>Hợp với object có nhiều field optional hoặc quy trình dựng phức tạp.</p></div>
-              <div class="card"><span class="tag blue">Singleton</span><h3>Một instance dùng chung</h3><p>Hợp với config hoặc logger gốc, nhưng dễ dẫn tới global state nếu lạm dụng.</p></div>
+              <a class="card-link" href="./pattern.html?id=factory-method"><div class="card"><span class="tag blue">Factory Method</span><h3>Gom logic tạo object</h3><p>Dùng khi cần chọn implementation theo config hoặc môi trường.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=abstract-factory"><div class="card"><span class="tag blue">Abstract Factory</span><h3>Tạo họ object liên quan</h3><p>Khi cần bộ UI hoặc bộ provider đồng bộ theo theme/platform.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=builder"><div class="card"><span class="tag blue">Builder</span><h3>Tạo object nhiều bước</h3><p>Hợp với object có nhiều field optional hoặc quy trình dựng phức tạp.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=prototype"><div class="card"><span class="tag blue">Prototype</span><h3>Sao chép object</h3><p>Khi tạo mới tốn kém; clone từ bản mẫu rồi chỉnh sửa.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=singleton"><div class="card"><span class="tag blue">Singleton</span><h3>Một instance dùng chung</h3><p>Hợp với config hoặc logger gốc, nhưng dễ dẫn tới global state nếu lạm dụng.</p></div></a>
             </div>
           </section>
 
           <section class="section-block" id="structural">
             <h2>Structural Patterns</h2>
             <div class="grid-3">
-              <div class="card"><span class="tag pink">Adapter</span><h3>Tích hợp vendor</h3><p>Chuẩn hóa interface bên ngoài để không làm bẩn domain nội bộ.</p></div>
-              <div class="card"><span class="tag pink">Facade</span><h3>Ẩn flow nhiều bước</h3><p>Gom một use case lớn thành một điểm gọi rõ ràng.</p></div>
-              <div class="card"><span class="tag pink">Decorator</span><h3>Thêm logging/cache/retry</h3><p>Bọc object gốc mà không sửa class gốc.</p></div>
-              <div class="card"><span class="tag pink">Proxy</span><h3>Kiểm soát truy cập</h3><p>Lazy load, access control, remote proxy.</p></div>
+              <a class="card-link" href="./pattern.html?id=adapter"><div class="card"><span class="tag pink">Adapter</span><h3>Tích hợp vendor</h3><p>Chuẩn hóa interface bên ngoài để không làm bẩn domain nội bộ.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=bridge"><div class="card"><span class="tag pink">Bridge</span><h3>Tách abstraction khỏi implementation</h3><p>Thay implementation mà không ảnh hưởng client.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=composite"><div class="card"><span class="tag pink">Composite</span><h3>Cây part-whole</h3><p>Menu, folder tree, org chart — xử lý leaf và node giống nhau.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=decorator"><div class="card"><span class="tag pink">Decorator</span><h3>Thêm logging/cache/retry</h3><p>Bọc object gốc mà không sửa class gốc.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=facade"><div class="card"><span class="tag pink">Facade</span><h3>Ẩn flow nhiều bước</h3><p>Gom một use case lớn thành một điểm gọi rõ ràng.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=flyweight"><div class="card"><span class="tag pink">Flyweight</span><h3>Chia sẻ state chung</h3><p>Tiết kiệm bộ nhớ khi có hàng nghìn object tương tự (icon, glyph).</p></div></a>
+              <a class="card-link" href="./pattern.html?id=proxy"><div class="card"><span class="tag pink">Proxy</span><h3>Kiểm soát truy cập</h3><p>Lazy load, access control, remote proxy.</p></div></a>
               <div class="card"><span class="tag pink">Repository</span><h3>Bảo vệ domain khỏi ORM</h3><p>Tạo boundary giữa business logic và persistence layer.</p></div>
             </div>
           </section>
@@ -94,12 +260,17 @@
           <section class="section-block" id="behavioral">
             <h2>Behavioral Patterns</h2>
             <div class="grid-3">
-              <div class="card"><span class="tag green">Strategy</span><h3>Nhiều biến thể hành vi</h3><p>Tách `if/else` dài thành từng chiến lược độc lập.</p></div>
-              <div class="card"><span class="tag green">Observer</span><h3>Một event, nhiều phản ứng</h3><p>Publisher phát sự kiện, subscriber tự xử lý phần của mình.</p></div>
-              <div class="card"><span class="tag green">Command</span><h3>Đóng gói action</h3><p>Rất hợp với queue, retry, undo/redo và deferred execution.</p></div>
-              <div class="card"><span class="tag green">State</span><h3>Hành vi theo trạng thái</h3><p>Quản lý lifecycle như order, booking, payment.</p></div>
-              <div class="card"><span class="tag green">Template Method</span><h3>Khung thuật toán cố định</h3><p>Hợp với import pipeline hoặc workflow có skeleton giống nhau.</p></div>
-              <div class="card"><span class="tag green">Chain of Responsibility</span><h3>Nhiều bước xử lý nối tiếp</h3><p>Rất hợp với middleware, validation và approval flow.</p></div>
+              <a class="card-link" href="./pattern.html?id=strategy"><div class="card"><span class="tag green">Strategy</span><h3>Nhiều biến thể hành vi</h3><p>Tách `if/else` dài thành từng chiến lược độc lập.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=observer"><div class="card"><span class="tag green">Observer</span><h3>Một event, nhiều phản ứng</h3><p>Publisher phát sự kiện, subscriber tự xử lý phần của mình.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=command"><div class="card"><span class="tag green">Command</span><h3>Đóng gói action</h3><p>Rất hợp với queue, retry, undo/redo và deferred execution.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=state"><div class="card"><span class="tag green">State</span><h3>Hành vi theo trạng thái</h3><p>Quản lý lifecycle như order, booking, payment.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=template-method"><div class="card"><span class="tag green">Template Method</span><h3>Khung thuật toán cố định</h3><p>Hợp với import pipeline hoặc workflow có skeleton giống nhau.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=chain-of-responsibility"><div class="card"><span class="tag green">Chain of Responsibility</span><h3>Nhiều bước xử lý nối tiếp</h3><p>Rất hợp với middleware, validation và approval flow.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=iterator"><div class="card"><span class="tag green">Iterator</span><h3>Duyệt collection</h3><p>Ẩn cấu trúc bên trong khi client lặp qua phần tử.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=mediator"><div class="card"><span class="tag green">Mediator</span><h3>Gom giao tiếp</h3><p>Chat room, dialog coordinator — object không gọi trực tiếp lẫn nhau.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=memento"><div class="card"><span class="tag green">Memento</span><h3>Lưu/khôi phục trạng thái</h3><p>Undo trong editor, snapshot trước khi thay đổi lớn.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=visitor"><div class="card"><span class="tag green">Visitor</span><h3>Thao tác trên cấu trúc</h3><p>Thêm operation mới lên nhiều class element mà không sửa chúng.</p></div></a>
+              <a class="card-link" href="./pattern.html?id=interpreter"><div class="card"><span class="tag green">Interpreter</span><h3>Grammar nhỏ</h3><p>Parse biểu thức, rule engine đơn giản.</p></div></a>
             </div>
           </section>
 

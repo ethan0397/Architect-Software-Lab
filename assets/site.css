@@ -947,6 +947,150 @@ td {
   }
 }
 
+.pattern-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  list-style: none;
+  margin: 14px 0 18px;
+  padding: 0;
+}
+
+.pattern-link-list a {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pattern-link-list a:hover {
+  text-decoration: underline;
+}
+
+.gof-group + .gof-group {
+  margin-top: 28px;
+}
+
+.gof-group h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.card-link:hover h3 {
+  color: var(--gold);
+}
+
+.pattern-breadcrumb {
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.pattern-breadcrumb a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.pattern-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.pattern-code {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: 4px;
+  border: 1px solid var(--nav-border);
+  background: var(--nav-bg);
+  overflow-x: auto;
+  font-family: var(--font-code);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.pattern-back {
+  margin-top: 24px;
+}
+
+.pattern-back .file-link {
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 3px;
+  border: 1px solid var(--nav-border);
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  font-family: var(--font-code);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.pattern-sidebar-links a.active {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.pattern-section-toc {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pattern-source {
+  margin-bottom: 8px;
+}
+
+.pattern-source .file-link {
+  margin-top: 10px;
+}
+
+.pattern-subheading {
+  margin: 20px 0 10px;
+  font-family: var(--font-code);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.pattern-figure {
+  margin: 16px 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.pattern-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pattern-figure figcaption {
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+.table-wrap a {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.table-wrap a:hover {
+  text-decoration: underline;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .site-bg {
     display: none;
